@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>OpenWRT: Travel router</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preload" href="/assets/css/app.css?v=cdb99f323f" as="style" />
+    <link rel="preload" href="/assets/js/manifest.js?v=cdb99f323f" as="script" />
+    <link rel="preload" href="/assets/js/vendor/content-api.min.js?v=cdb99f323f" as="script" />
+    <link rel="preload" href="/assets/js/vendor.js?v=cdb99f323f" as="script" />
+    <link rel="preload" href="/assets/js/app.js?v=cdb99f323f" as="script" />
+
+      <link rel="preload" href="/assets/css/post.css?v=cdb99f323f" as="style" />
+  <link rel="preload" href="/assets/js/post.js?v=cdb99f323f" as="script" />
+
+
+    <style>
+      /* These font-faces are here to make fonts work if the Ghost instance is installed in a subdirectory */
+
+      /* source-sans-pro-regular */
+      @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: local('SourceSansPro-Regular'),
+            url("/assets/fonts/source-sans-pro/latin/source-sans-pro-regular.woff2?v=cdb99f323f") format('woff2'),
+            url("/assets/fonts/source-sans-pro/latin/source-sans-pro-regular.woff?v=cdb99f323f") format('woff');
+      }
+
+      /* source-sans-pro-600 */
+      @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: local('SourceSansPro-SemiBold'),
+            url("/assets/fonts/source-sans-pro/latin/source-sans-pro-600.woff2?v=cdb99f323f") format('woff2'),
+            url("/assets/fonts/source-sans-pro/latin/source-sans-pro-600.woff?v=cdb99f323f") format('woff');
+      }
+
+      /* source-sans-pro-700 */
+      @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: local('SourceSansPro-Bold'),
+            url("/assets/fonts/source-sans-pro/latin/source-sans-pro-700.woff2?v=cdb99f323f") format('woff2'),
+            url("/assets/fonts/source-sans-pro/latin/source-sans-pro-700.woff?v=cdb99f323f") format('woff');
+      }
+
+      /* iconmoon */
+      @font-face {
+        font-family: 'icomoon';
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+        src: url("/assets/fonts/icomoon/icomoon.eot?101fc3?v=cdb99f323f");
+        src: url("/assets/fonts/icomoon/icomoon.eot?101fc3?v=cdb99f323f#iefix") format('embedded-opentype'),
+        url("/assets/fonts/icomoon/icomoon.ttf?101fc3?v=cdb99f323f") format('truetype'),
+        url("/assets/fonts/icomoon/icomoon.woff?101fc3?v=cdb99f323f") format('woff'),
+        url("/assets/fonts/icomoon/icomoon.svg?101fc3?v=cdb99f323f#icomoon") format('svg');
+      }
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="/assets/css/app.css?v=cdb99f323f" media="screen" />
+
+      <link rel="stylesheet" type="text/css" href="/assets/css/post.css?v=cdb99f323f" media="screen" />
+
+
+    
+
+    <link rel="canonical" href="/openwrt-travel-router/">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+    <meta property="og:site_name" content="Ashley Buckingham - Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="OpenWRT: Travel router">
+    <meta property="og:description" content="In March 2020, President Donald Trump made an executive order banning tourists from entering the USA.
+
+After 20 months, in November 2021, President Biden reopened the US, and travel resumed. In May 2022, I finally arrived back in Las Vegas after two years of separation.
+
+While I loved visiting, I">
+    <meta property="og:url" content="/openwrt-travel-router/">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1583474884909-230dac058b63?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDEwfHxyb3V0ZXJ8ZW58MHx8fHwxNjYxNDYyMDk4&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000">
+    <meta property="article:published_time" content="2022-08-25T21:15:09.000Z">
+    <meta property="article:modified_time" content="2022-08-25T22:38:36.000Z">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="OpenWRT: Travel router">
+    <meta name="twitter:description" content="In March 2020, President Donald Trump made an executive order banning tourists from entering the USA.
+
+After 20 months, in November 2021, President Biden reopened the US, and travel resumed. In May 2022, I finally arrived back in Las Vegas after two years of separation.
+
+While I loved visiting, I">
+    <meta name="twitter:url" content="/openwrt-travel-router/">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1583474884909-230dac058b63?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDEwfHxyb3V0ZXJ8ZW58MHx8fHwxNjYxNDYyMDk4&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Ashley Buckingham">
+    <meta name="twitter:creator" content="@cur50r_">
+    <meta property="og:image:width" content="2000">
+    <meta property="og:image:height" content="1500">
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Ashley Buckingham - Blog",
+        "url": "/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "/favicon.ico",
+            "width": 48,
+            "height": 48
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Ashley Buckingham",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/content/images/2023/01/T016PALP94Y-U01DN9PGZ6W-e92dcddddf2a-512.jpeg",
+            "width": 512,
+            "height": 512
+        },
+        "url": "/author/ashley/",
+        "sameAs": [
+            "https://uk.linkedin.com/in/ashleybuckingham",
+            "https://twitter.com/cur50r_"
+        ]
+    },
+    "headline": "OpenWRT: Travel router",
+    "url": "/openwrt-travel-router/",
+    "datePublished": "2022-08-25T21:15:09.000Z",
+    "dateModified": "2022-08-25T22:38:36.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://images.unsplash.com/photo-1583474884909-230dac058b63?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDEwfHxyb3V0ZXJ8ZW58MHx8fHwxNjYxNDYyMDk4&ixlib=rb-1.2.1&q=80&w=2000",
+        "width": 2000,
+        "height": 1500
+    },
+    "description": "In March 2020, President Donald Trump made an executive order banning tourists from entering the USA.\n\nAfter 20 months, in November 2021, President Biden reopened the US, and travel resumed. In May 2022, I finally arrived back in Las Vegas after two years of separation.\n\nWhile I loved visiting, I was shocked by the tactics some hotels used to scrape back the lost wages from the pandemic—an increase in resort fees, lack of drink service and higher table minimums.\n\nThe tactic that affected me the ",
+    "mainEntityOfPage": "/openwrt-travel-router/"
+}
+    </script>
+
+    <meta name="generator" content="Ghost 5.74">
+    <link rel="alternate" type="application/rss+xml" title="Ashley Buckingham - Blog" href="/rss/">
+    
+    <script defer src="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/sodo-search.min.js" data-key="64f7a9d7053e23a890539bf696" data-styles="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/main.css" data-sodo-search="/" crossorigin="anonymous"></script>
+    
+    <link href="/webmentions/receive/" rel="webmention">
+    <script defer src="/public/cards.min.js?v=cdb99f323f"></script><style>:root {--ghost-accent-color: #ff40ff;}</style>
+    <link rel="stylesheet" type="text/css" href="/public/cards.min.css?v=cdb99f323f">
+
+    <style>
+      :root {
+        --primary-subtle-color: var(--ghost-accent-color) !important;
+      }
+    </style>
+
+    <script>
+      // @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&dn=expat.txt Expat
+      const ghostHost = ""
+      // @license-end
+    </script>
+
+  </head>
+  <body class="post-template">
+    
+
+
+
+  
+<header class="m-header with-picture js-header">
+  <div class="m-mobile-topbar" data-aos="fade-down">
+    <button class="m-icon-button in-mobile-topbar js-open-menu" aria-label="Open menu">
+      <span class="icon-menu" aria-hidden="true"></span>
+    </button>
+      <a href="" class="m-site-name in-mobile-topbar">
+        Ashley Buckingham - Blog
+      </a>
+    <button class="m-icon-button in-mobile-topbar js-open-search" aria-label="Open search">
+      <span class="icon-search" aria-hidden="true"></span>
+    </button>
+  </div>
+
+  <div class="m-menu js-menu">
+    <button class="m-icon-button outlined as-close-menu js-close-menu" aria-label="Close menu">
+      <span class="icon-close"></span>
+    </button>
+    <div class="m-menu__main" data-aos="fade-down">
+      <div class="l-wrapper">
+        <div class="m-nav js-main-nav">
+          <nav class="m-nav__left js-main-nav-left" role="navigation" aria-label="Main menu">
+            <ul>
+                <li class="only-desktop">
+                  <a href="/" class="m-site-name in-desktop-menu">
+                    Ashley Buckingham - Blog
+                  </a>
+                </li>
+                
+    <li class="nav-about">
+      <a href="/about/">About</a>
+    </li>
+
+              <li class="submenu-option js-submenu-option">
+                <button class="m-icon-button in-menu-main more js-toggle-submenu" aria-label="Open submenu">
+                  <span class="icon-more" aria-hidden="true"></span>
+                </button>
+                <div class="m-submenu js-submenu">
+                  <div class="l-wrapper in-submenu">
+                    <section class="m-recent-articles">
+                      <h3 class="m-submenu-title in-recent-articles">Recent articles</h3>
+                          <div class="swiper js-recent-slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                  <a href="/nft-viewer/" class="m-recent-article">
+                                    <div class="m-recent-article__picture ">
+                                        <img src="https://images.unsplash.com/photo-1642525027649-00d7397a6d4a?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDR8fG5mdHxlbnwwfHx8fDE2NzM1NjMzMDg&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;300" loading="lazy" alt="">
+                                    </div>
+                                    <h3 class="m-recent-article__title js-recent-article-title" title="NFT Viewer">
+                                      NFT Viewer
+                                    </h3>
+                                    <span class="m-recent-article__date">10 months ago</span>
+                                  </a>
+                                </div>
+                                <div class="swiper-slide">
+                                  <a href="/chat/" class="m-recent-article">
+                                    <div class="m-recent-article__picture ">
+                                        <img src="https://images.unsplash.com/photo-1601132359864-c974e79890ac?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDl8fHJvYm90fGVufDB8fHx8MTY3MTgxMTI1MQ&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;300" loading="lazy" alt="">
+                                    </div>
+                                    <h3 class="m-recent-article__title js-recent-article-title" title="Why AI will not replace developers">
+                                      Why AI will not replace developers
+                                    </h3>
+                                    <span class="m-recent-article__date">a year ago</span>
+                                  </a>
+                                </div>
+                                <div class="swiper-slide">
+                                  <a href="/openwrt-travel-router/" class="m-recent-article">
+                                    <div class="m-recent-article__picture ">
+                                        <img src="https://images.unsplash.com/photo-1583474884909-230dac058b63?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDEwfHxyb3V0ZXJ8ZW58MHx8fHwxNjYxNDYyMDk4&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;300" loading="lazy" alt="">
+                                    </div>
+                                    <h3 class="m-recent-article__title js-recent-article-title" title="OpenWRT: Travel router">
+                                      OpenWRT: Travel router
+                                    </h3>
+                                    <span class="m-recent-article__date">a year ago</span>
+                                  </a>
+                                </div>
+                                <div class="swiper-slide">
+                                  <a href="/echo-tweet-audience-analysis/" class="m-recent-article">
+                                    <div class="m-recent-article__picture ">
+                                        <img src="/content/images/size/w300/2022/08/pexels-pixabay-267389.jpg" loading="lazy" alt="">
+                                    </div>
+                                    <h3 class="m-recent-article__title js-recent-article-title" title="Echo: Twitter Audience Analysis">
+                                      Echo: Twitter Audience Analysis
+                                    </h3>
+                                    <span class="m-recent-article__date">a year ago</span>
+                                  </a>
+                                </div>
+                            </div>
+                          </div>
+                    </section>
+                    <section class="m-tags">
+                      <h3 class="m-submenu-title">Tags</h3>
+                        <ul>
+                            <li>
+                              <a href="/tag/docker/">docker</a>
+                            </li>
+                            <li>
+                              <a href="/tag/ghost-tag/">ghost</a>
+                            </li>
+                            <li>
+                              <a href="/tag/news/">News</a>
+                            </li>
+                            <li>
+                              <a href="/tag/node-js/">node.js</a>
+                            </li>
+                        </ul>
+                    </section>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <div class="m-nav__right">
+            <button class="m-icon-button in-menu-main js-open-search" aria-label="Open search">
+              <span class="icon-search" aria-hidden="true"></span>
+            </button>
+            <div class="m-toggle-darkmode js-tooltip" data-tippy-content="Toggle light/dark mode" tabindex="0">
+              <label for="toggle-darkmode" class="sr-only">
+                Toggle light/dark mode
+              </label>
+              <input id="toggle-darkmode" type="checkbox" class="js-toggle-darkmode">
+              <div>
+                <span class="icon-moon moon" aria-hidden="true"></span>
+                <span class="icon-sunny sun" aria-hidden="true"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+
+<main class="main-wrap">
+    
+  <section class="m-hero with-picture" data-aos="fade">
+    <div class="m-hero__picture in-post">
+      <img
+        srcset="
+          https://images.unsplash.com/photo-1583474884909-230dac058b63?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDEwfHxyb3V0ZXJ8ZW58MHx8fHwxNjYxNDYyMDk4&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;300 300w,
+          https://images.unsplash.com/photo-1583474884909-230dac058b63?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDEwfHxyb3V0ZXJ8ZW58MHx8fHwxNjYxNDYyMDk4&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;600 600w,
+          https://images.unsplash.com/photo-1583474884909-230dac058b63?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDEwfHxyb3V0ZXJ8ZW58MHx8fHwxNjYxNDYyMDk4&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;1000 1000w,
+          https://images.unsplash.com/photo-1583474884909-230dac058b63?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDEwfHxyb3V0ZXJ8ZW58MHx8fHwxNjYxNDYyMDk4&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000 2000w
+        "
+        sizes="(max-width: 600px) 600px, (max-width: 1000px) 1000px, 2000px"
+        src="https://images.unsplash.com/photo-1583474884909-230dac058b63?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDEwfHxyb3V0ZXJ8ZW58MHx8fHwxNjYxNDYyMDk4&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;1000"
+        alt=""
+      />
+    </div>
+    </section>
+        <div class="l-wrapper in-caption">
+          <p class="m-small-text align-center">
+            Photo by <a href="https://unsplash.com/@pkumar26?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit">Praveen kumar Mathivanan</a> / <a href="https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit">Unsplash</a>
+          </p>
+        </div>
+
+  <article>
+    <div class="l-content in-post">
+        <div class="l-wrapper in-post  js-aos-wrapper" data-aos="fade-up"
+          data-aos-delay="300">
+          <div
+            class="l-post-content js-progress-content">
+            <header class="m-heading">
+              <h1 class="m-heading__title in-post">OpenWRT: Travel router</h1>
+              <div class="m-heading__meta">
+                <span class="m-heading__meta__time">Aug 25, 2022</span>
+              </div>
+            </header>
+            <div class="pos-relative js-post-content">
+              <div class="m-share">
+                <div class="m-share__content js-sticky">
+                  <a href="https://www.facebook.com/sharer/sharer.php?u=/openwrt-travel-router/"
+                    class="m-icon-button filled in-share" target="_blank" rel="noopener" aria-label="Facebook">
+                    <span class="icon-facebook" aria-hidden="true"></span>
+                  </a>
+                  <a href="https://twitter.com/intent/tweet?text=OpenWRT%3A%20Travel%20router&url=/openwrt-travel-router/"
+                    class="m-icon-button filled in-share" target="_blank" rel="noopener" aria-label="Twitter">
+                    <span class="icon-twitter" aria-hidden="true"></span>
+                  </a>
+                  <button class="m-icon-button filled in-share progress js-scrolltop" aria-label="Scroll to top">
+                    <span class="icon-arrow-top" aria-hidden="true"></span>
+                    <svg aria-hidden="true">
+                      <circle class="progress-ring__circle js-progress" fill="transparent" r="0" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <p></p><p>In March 2020, President Donald Trump made an executive order banning tourists from entering the USA.</p><p>After 20 months, in November 2021, President Biden reopened the US, and travel resumed. In May 2022, I finally arrived back in Las Vegas after two years of separation.</p><p>While I loved visiting, I was shocked by the tactics some hotels used to scrape back the lost wages from the pandemic—an increase in resort fees, lack of drink service and higher table minimums.</p><p>The tactic that affected me the most was limiting devices on the hotel Wi-Fi. I found most hotels would only allow you to connect only one or two devices to Wi-Fi within 24 hours. After that, any additional device would cost 35$ a day!</p><h3 id="openwrt">OpenWRT</h3><p>I will be travelling back in the coming weeks, so I spent some time researching a solution and found OpenWRT. Using OpenWRT, I could create a small travel router that would enable me to:</p><ul><li>Connect multiple devices to one connection, removing device limits</li><li>Use a VPN connection to secure all my internet traffic by default</li><li>Set up the connection between all my devices to the router once, speeding up the connection time between hotels.</li></ul><p>I first decided to look into using a USB WIFI adapter with my Macbook to let me connect my laptop to the Wi-Fi and then share the connection through the external USB Wi-Fi. However, I soon found that support for external Wi-Fi adapters was lacking in the new MacBook pros.</p><p>I soon settled on using a raspberry pi, a small credit card-sized computer. Like the Macbook, the Pi has onboard Wi-Fi that I could use to connect to the hotel; I would then use my USB wireless adapter to connect to my other devices. After watching the helpful tutorial by NETWORKCHUCK, I purchased the RT5370 for £7.50.</p><figure class="kg-card kg-image-card"><img src="/content/images/2022/08/516PzeiQ0nL._AC_SL1000_.jpg" class="kg-image" alt loading="lazy" width="956" height="776" srcset="/content/images/size/w600/2022/08/516PzeiQ0nL._AC_SL1000_.jpg 600w, /content/images/2022/08/516PzeiQ0nL._AC_SL1000_.jpg 956w" sizes="(min-width: 720px) 720px"></figure><p>  </p><p>I then downloaded the raspberry pi image from the OpenWRT website <a href="https://openwrt.org/downloads?ref=localhost">https://openwrt.org/downloads</a>, flashed the SD card and inserted it into the Raspberry Pi.</p><p>Next, I connected the pi to the MacBook using an ethernet cable. And ran the following commands</p><!--kg-card-begin: html--><iframe src="https://carbon.now.sh/embed?bg=rgba%28255%2C255%2C255%2C0%29&t=material&wt=none&l=application%2Fx-sh&width=680&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%2523%2520ssh%2520to%2520pi%250Assh%2520root%2540192.168.1.1%250A%250A%2523%2520change%2520password%250Aroot%2540OpenWrt%253A%7E%2520passwd%250Alogmein123%250A%250A%2523%2520Edit%2520the%2520network%2520file%250Aroot%2540OpenWrt%253A%7E%2520vi%2520etc%252Fconfig%252Fnetwork%250A%250Aconfig%2520interface%2520%27loopback%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520device%2520%27lo%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520proto%2520%27static%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520ipaddr%2520%27127.0.0.1%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520netmask%2520%27255.0.0.0%27%250A%250Aconfig%2520globals%2520%27globals%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520ula_prefix%2520%27fdb4%253A089f%253A87e6%253A%253A%252F48%27%250A%250Aconfig%2520device%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520name%2520%27br-lan%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520type%2520%27bridge%27%250A%2520%2520%2520%2520%2520%2520%2520%2520list%2520ports%2520%27eth0%27%250A%250Aconfig%2520interface%2520%27lan%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520device%2520%27br-lan%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520proto%2520%27static%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520ipaddr%2520%2710.71.71.1%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520netmask%2520%27255.255.255.0%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520ip6assign%2520%2760%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520force_link%2520%271%27%250A%250Aconfig%2520interface%2520%27wwan%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520proto%2520%27dhcp%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520peerdns%2520%270%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520dns%2520%271.1.1.1%25208.8.8.8%27%250A%250Aconfig%2520interface%2520%27vpnclient%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520ifname%2520%27tun0%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520proto%2520%27none%27%250A%250A%2523%2520update%2520firewall%250A%250Aroot%2540OpenWrt%253A%7E%2520vi%2520etc%252Fconfig%252Ffirewall%250Aconfig%2520zone%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520name%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520wan%250A%2520%2520%2520%2520%2520%2520%2520%2520list%2520%2520%2520network%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%27wan%27%250A%2520%2520%2520%2520%2520%2520%2520%2520list%2520%2520%2520network%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%27wan6%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520input%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520ACCEPT%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520output%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520ACCEPT%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520forward%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520REJECT%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520masq%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%25201%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520mtu_fix%2520%2520%2520%2520%2520%2520%2520%2520%2520%25201%250A%250A%2523%2520reboot%250Aroot%2540OpenWrt%253A%7E%2520reboot%250A%250A%2523%2520setup%2520wireless%250Aroot%2540OpenWrt%253A%7E%2523%2520vi%2520%252Fetc%252Fconfig%252Fwireless%250Aconfig%2520wifi-device%2520%27radio0%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520type%2520%27mac80211%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520path%2520%27platform%252Fsoc%252Ffe300000.mmcnr%252Fmmc_host%252Fmmc1%252Fmmc1%253A0001%252Fmmc1%253A0001%253A1%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520channel%2520%277%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520band%2520%2711g%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520htmode%2520%27VHT20%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520disabled%2520%270%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520short_gi_40%2520%270%27%250A%250Aconfig%2520wifi-iface%2520%27default_radio0%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520device%2520%27radio0%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520network%2520%27lan%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520mode%2520%27ap%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520ssid%2520%27OpenWrt%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520encryption%2520%27none%27%250A%250A%2523%2520commit%2520changes%250Aroot%2540OpenWrt%253A%7E%2520uci%2520commit%2520wireless%250Aroot%2540OpenWrt%253A%7E%2520wifi%250A%250A%2523%2520install%2520driver%250Aopkg%2520update%250A%250Aopkg%2520install%2520kmod-rt2800-lib%2520kmod-rt2800-usb%2520kmod-rt2x00-lib%2520kmod-rt2" style="width: 100%; height: 2508px; border:0; transform: scale(1); overflow:hidden;" sandbox="allow-scripts allow-same-origin">
+</iframe><!--kg-card-end: html--><p>I was able to connect to the new wifi provided by the usb adapter and conduct a speed test.</p><figure class="kg-card kg-image-card"><img src="/content/images/2022/08/IMG_7488.PNG" class="kg-image" alt loading="lazy" width="1170" height="2532" srcset="/content/images/size/w600/2022/08/IMG_7488.PNG 600w, /content/images/size/w1000/2022/08/IMG_7488.PNG 1000w, /content/images/2022/08/IMG_7488.PNG 1170w" sizes="(min-width: 720px) 720px"></figure><figure class="kg-card kg-image-card"><img src="/content/images/2022/08/IMG_7489.PNG" class="kg-image" alt loading="lazy" width="1170" height="2532" srcset="/content/images/size/w600/2022/08/IMG_7489.PNG 600w, /content/images/size/w1000/2022/08/IMG_7489.PNG 1000w, /content/images/2022/08/IMG_7489.PNG 1170w" sizes="(min-width: 720px) 720px"></figure><p>While the internet speeds are not terrible, I found the solution unreliable, and I often had to reconnect the Pi to the laptop to troubleshoot issues.<br>This unreliability is not ideal when on holiday and trying to relax. I will seek an alternative solution in the coming days.</p>
+            </div>
+          </div>
+        </div>
+        <section class="m-author">
+          <div class="m-author__content">
+            <div class="m-author__picture">
+              <a href="/author/ashley/" class="m-author-picture" aria-label="Ashley Buckingham">
+                  <div style="background-image: url(/content/images/2023/01/T016PALP94Y-U01DN9PGZ6W-e92dcddddf2a-512.jpeg);"></div>
+              </a>
+            </div>
+            <div class="m-author__info">
+              <h4 class="m-author__name">
+                <a href="/author/ashley/">Ashley Buckingham</a>
+              </h4>
+                <p class="m-author__bio">Tech lead, Developer, Hacker</p>
+              <ul class="m-author-links">
+                  <li>
+                    <a href="https://uk.linkedin.com/in/ashleybuckingham" target="_blank" rel="noopener" aria-label="Website">
+                      <span class="icon-globe" aria-hidden="true"></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://twitter.com/@cur50r_" target="_blank" rel="noopener" aria-label="Twitter">
+                      <span class="icon-twitter" aria-hidden="true"></span>
+                    </a>
+                  </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+
+    </div>
+  </article>
+</main>
+
+
+
+    
+<div class="m-search js-search" role="dialog" aria-modal="true" aria-label="Search">
+  <button class="m-icon-button outlined as-close-search js-close-search" aria-label="Close search">
+    <span class="icon-close" aria-hidden="true"></span>
+  </button>
+  <div class="m-search__content">
+    <form class="m-search__form">
+      <div class="pos-relative">
+        <span class="icon-search m-search-icon" aria-hidden="true"></span>
+        <label for="search-input" class="sr-only">
+          Type to search
+        </label>
+        <input id="search-input" type="text" class="m-input in-search js-input-search" placeholder="Type to search">
+      </div>
+    </form>
+    <div class="js-search-results hide"></div>
+    <p class="m-not-found align-center hide js-no-results">
+      No results for your search, please try with something else.
+    </p>
+  </div>
+</div>
+
+    
+<footer class="m-footer">
+  <div class="m-footer__content">
+    <nav class="m-footer-social">
+      <a href="/rss" aria-label="RSS">
+        <span class="icon-rss" aria-hidden="true"></span>
+      </a>
+    </nav>
+    <p class="m-footer-copyright">
+      <span>Ashley Buckingham - Blog &copy; 2023</span>
+      <span>&nbsp; &bull; &nbsp;</span>
+      <span>Published with <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a></span>
+    </p>
+  </div>
+</footer>
+
+    <script defer src="/assets/js/manifest.js?v=cdb99f323f"></script>
+    <script defer src="/assets/js/vendor/content-api.min.js?v=cdb99f323f"></script>
+    <script defer src="/assets/js/vendor.js?v=cdb99f323f"></script>
+    <script defer src="/assets/js/app.js?v=cdb99f323f"></script>
+
+      <script defer src="/assets/js/post.js?v=cdb99f323f"></script>
+
+
+    
+  </body>
+</html>

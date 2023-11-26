@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Why AI will not replace developers</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preload" href="/assets/css/app.css?v=cdb99f323f" as="style" />
+    <link rel="preload" href="/assets/js/manifest.js?v=cdb99f323f" as="script" />
+    <link rel="preload" href="/assets/js/vendor/content-api.min.js?v=cdb99f323f" as="script" />
+    <link rel="preload" href="/assets/js/vendor.js?v=cdb99f323f" as="script" />
+    <link rel="preload" href="/assets/js/app.js?v=cdb99f323f" as="script" />
+
+      <link rel="preload" href="/assets/css/post.css?v=cdb99f323f" as="style" />
+  <link rel="preload" href="/assets/js/post.js?v=cdb99f323f" as="script" />
+
+
+    <style>
+      /* These font-faces are here to make fonts work if the Ghost instance is installed in a subdirectory */
+
+      /* source-sans-pro-regular */
+      @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: local('SourceSansPro-Regular'),
+            url("/assets/fonts/source-sans-pro/latin/source-sans-pro-regular.woff2?v=cdb99f323f") format('woff2'),
+            url("/assets/fonts/source-sans-pro/latin/source-sans-pro-regular.woff?v=cdb99f323f") format('woff');
+      }
+
+      /* source-sans-pro-600 */
+      @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: local('SourceSansPro-SemiBold'),
+            url("/assets/fonts/source-sans-pro/latin/source-sans-pro-600.woff2?v=cdb99f323f") format('woff2'),
+            url("/assets/fonts/source-sans-pro/latin/source-sans-pro-600.woff?v=cdb99f323f") format('woff');
+      }
+
+      /* source-sans-pro-700 */
+      @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: local('SourceSansPro-Bold'),
+            url("/assets/fonts/source-sans-pro/latin/source-sans-pro-700.woff2?v=cdb99f323f") format('woff2'),
+            url("/assets/fonts/source-sans-pro/latin/source-sans-pro-700.woff?v=cdb99f323f") format('woff');
+      }
+
+      /* iconmoon */
+      @font-face {
+        font-family: 'icomoon';
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+        src: url("/assets/fonts/icomoon/icomoon.eot?101fc3?v=cdb99f323f");
+        src: url("/assets/fonts/icomoon/icomoon.eot?101fc3?v=cdb99f323f#iefix") format('embedded-opentype'),
+        url("/assets/fonts/icomoon/icomoon.ttf?101fc3?v=cdb99f323f") format('truetype'),
+        url("/assets/fonts/icomoon/icomoon.woff?101fc3?v=cdb99f323f") format('woff'),
+        url("/assets/fonts/icomoon/icomoon.svg?101fc3?v=cdb99f323f#icomoon") format('svg');
+      }
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="/assets/css/app.css?v=cdb99f323f" media="screen" />
+
+      <link rel="stylesheet" type="text/css" href="/assets/css/post.css?v=cdb99f323f" media="screen" />
+
+
+    
+
+    <link rel="canonical" href="/chat/">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+    <meta property="og:site_name" content="Ashley Buckingham - Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Why AI will not replace developers">
+    <meta property="og:description" content="AI has recently been thrown around as a &#x27;buzz term&#x27;. In the last year, it seemed as if any company with the most basic of  logic was plastered with one or more of words &#x27;AI&#x27;, &#x27;Artificial intelligence or &#x27;real AI.&#x27;
+
+While the true definition of AI is up for">
+    <meta property="og:url" content="/chat/">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1601132359864-c974e79890ac?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDl8fHJvYm90fGVufDB8fHx8MTY3MTgxMTI1MQ&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000">
+    <meta property="article:published_time" content="2022-12-23T11:44:53.000Z">
+    <meta property="article:modified_time" content="2022-12-23T16:05:23.000Z">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Why AI will not replace developers">
+    <meta name="twitter:description" content="AI has recently been thrown around as a &#x27;buzz term&#x27;. In the last year, it seemed as if any company with the most basic of  logic was plastered with one or more of words &#x27;AI&#x27;, &#x27;Artificial intelligence or &#x27;real AI.&#x27;
+
+While the true definition of AI is up for">
+    <meta name="twitter:url" content="/chat/">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1601132359864-c974e79890ac?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDl8fHJvYm90fGVufDB8fHx8MTY3MTgxMTI1MQ&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Ashley Buckingham">
+    <meta name="twitter:creator" content="@cur50r_">
+    <meta property="og:image:width" content="2000">
+    <meta property="og:image:height" content="1332">
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Ashley Buckingham - Blog",
+        "url": "/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "/favicon.ico",
+            "width": 48,
+            "height": 48
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Ashley Buckingham",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/content/images/2023/01/T016PALP94Y-U01DN9PGZ6W-e92dcddddf2a-512.jpeg",
+            "width": 512,
+            "height": 512
+        },
+        "url": "/author/ashley/",
+        "sameAs": [
+            "https://uk.linkedin.com/in/ashleybuckingham",
+            "https://twitter.com/cur50r_"
+        ]
+    },
+    "headline": "Why AI will not replace developers",
+    "url": "/chat/",
+    "datePublished": "2022-12-23T11:44:53.000Z",
+    "dateModified": "2022-12-23T16:05:23.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://images.unsplash.com/photo-1601132359864-c974e79890ac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDl8fHJvYm90fGVufDB8fHx8MTY3MTgxMTI1MQ&ixlib=rb-4.0.3&q=80&w=2000",
+        "width": 2000,
+        "height": 1332
+    },
+    "description": "AI has recently been thrown around as a &#x27;buzz term&#x27;. In the last year, it seemed as if any company with the most basic of  logic was plastered with one or more of words &#x27;AI&#x27;, &#x27;Artificial intelligence or &#x27;real AI.&#x27;\n\nWhile the true definition of AI is up for debate, companies are developing complex deep learning. One such company OpenAI has developed GPT-3. GPT-3, as described by its authors, is an &#x27;autoregressive language model that uses deep learning to produce human-like text&#x27;.\n\nIn the last few",
+    "mainEntityOfPage": "/chat/"
+}
+    </script>
+
+    <meta name="generator" content="Ghost 5.74">
+    <link rel="alternate" type="application/rss+xml" title="Ashley Buckingham - Blog" href="/rss/">
+    
+    <script defer src="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/sodo-search.min.js" data-key="64f7a9d7053e23a890539bf696" data-styles="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/main.css" data-sodo-search="/" crossorigin="anonymous"></script>
+    
+    <link href="/webmentions/receive/" rel="webmention">
+    <script defer src="/public/cards.min.js?v=cdb99f323f"></script><style>:root {--ghost-accent-color: #ff40ff;}</style>
+    <link rel="stylesheet" type="text/css" href="/public/cards.min.css?v=cdb99f323f">
+
+    <style>
+      :root {
+        --primary-subtle-color: var(--ghost-accent-color) !important;
+      }
+    </style>
+
+    <script>
+      // @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&dn=expat.txt Expat
+      const ghostHost = ""
+      // @license-end
+    </script>
+
+  </head>
+  <body class="post-template">
+    
+
+
+
+  
+<header class="m-header with-picture js-header">
+  <div class="m-mobile-topbar" data-aos="fade-down">
+    <button class="m-icon-button in-mobile-topbar js-open-menu" aria-label="Open menu">
+      <span class="icon-menu" aria-hidden="true"></span>
+    </button>
+      <a href="" class="m-site-name in-mobile-topbar">
+        Ashley Buckingham - Blog
+      </a>
+    <button class="m-icon-button in-mobile-topbar js-open-search" aria-label="Open search">
+      <span class="icon-search" aria-hidden="true"></span>
+    </button>
+  </div>
+
+  <div class="m-menu js-menu">
+    <button class="m-icon-button outlined as-close-menu js-close-menu" aria-label="Close menu">
+      <span class="icon-close"></span>
+    </button>
+    <div class="m-menu__main" data-aos="fade-down">
+      <div class="l-wrapper">
+        <div class="m-nav js-main-nav">
+          <nav class="m-nav__left js-main-nav-left" role="navigation" aria-label="Main menu">
+            <ul>
+                <li class="only-desktop">
+                  <a href="/" class="m-site-name in-desktop-menu">
+                    Ashley Buckingham - Blog
+                  </a>
+                </li>
+                
+    <li class="nav-about">
+      <a href="/about/">About</a>
+    </li>
+
+              <li class="submenu-option js-submenu-option">
+                <button class="m-icon-button in-menu-main more js-toggle-submenu" aria-label="Open submenu">
+                  <span class="icon-more" aria-hidden="true"></span>
+                </button>
+                <div class="m-submenu js-submenu">
+                  <div class="l-wrapper in-submenu">
+                    <section class="m-recent-articles">
+                      <h3 class="m-submenu-title in-recent-articles">Recent articles</h3>
+                          <div class="swiper js-recent-slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                  <a href="/nft-viewer/" class="m-recent-article">
+                                    <div class="m-recent-article__picture ">
+                                        <img src="https://images.unsplash.com/photo-1642525027649-00d7397a6d4a?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDR8fG5mdHxlbnwwfHx8fDE2NzM1NjMzMDg&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;300" loading="lazy" alt="">
+                                    </div>
+                                    <h3 class="m-recent-article__title js-recent-article-title" title="NFT Viewer">
+                                      NFT Viewer
+                                    </h3>
+                                    <span class="m-recent-article__date">10 months ago</span>
+                                  </a>
+                                </div>
+                                <div class="swiper-slide">
+                                  <a href="/chat/" class="m-recent-article">
+                                    <div class="m-recent-article__picture ">
+                                        <img src="https://images.unsplash.com/photo-1601132359864-c974e79890ac?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDl8fHJvYm90fGVufDB8fHx8MTY3MTgxMTI1MQ&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;300" loading="lazy" alt="">
+                                    </div>
+                                    <h3 class="m-recent-article__title js-recent-article-title" title="Why AI will not replace developers">
+                                      Why AI will not replace developers
+                                    </h3>
+                                    <span class="m-recent-article__date">a year ago</span>
+                                  </a>
+                                </div>
+                                <div class="swiper-slide">
+                                  <a href="/openwrt-travel-router/" class="m-recent-article">
+                                    <div class="m-recent-article__picture ">
+                                        <img src="https://images.unsplash.com/photo-1583474884909-230dac058b63?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDEwfHxyb3V0ZXJ8ZW58MHx8fHwxNjYxNDYyMDk4&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;300" loading="lazy" alt="">
+                                    </div>
+                                    <h3 class="m-recent-article__title js-recent-article-title" title="OpenWRT: Travel router">
+                                      OpenWRT: Travel router
+                                    </h3>
+                                    <span class="m-recent-article__date">a year ago</span>
+                                  </a>
+                                </div>
+                                <div class="swiper-slide">
+                                  <a href="/echo-tweet-audience-analysis/" class="m-recent-article">
+                                    <div class="m-recent-article__picture ">
+                                        <img src="/content/images/size/w300/2022/08/pexels-pixabay-267389.jpg" loading="lazy" alt="">
+                                    </div>
+                                    <h3 class="m-recent-article__title js-recent-article-title" title="Echo: Twitter Audience Analysis">
+                                      Echo: Twitter Audience Analysis
+                                    </h3>
+                                    <span class="m-recent-article__date">a year ago</span>
+                                  </a>
+                                </div>
+                            </div>
+                          </div>
+                    </section>
+                    <section class="m-tags">
+                      <h3 class="m-submenu-title">Tags</h3>
+                        <ul>
+                            <li>
+                              <a href="/tag/docker/">docker</a>
+                            </li>
+                            <li>
+                              <a href="/tag/ghost-tag/">ghost</a>
+                            </li>
+                            <li>
+                              <a href="/tag/news/">News</a>
+                            </li>
+                            <li>
+                              <a href="/tag/node-js/">node.js</a>
+                            </li>
+                        </ul>
+                    </section>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <div class="m-nav__right">
+            <button class="m-icon-button in-menu-main js-open-search" aria-label="Open search">
+              <span class="icon-search" aria-hidden="true"></span>
+            </button>
+            <div class="m-toggle-darkmode js-tooltip" data-tippy-content="Toggle light/dark mode" tabindex="0">
+              <label for="toggle-darkmode" class="sr-only">
+                Toggle light/dark mode
+              </label>
+              <input id="toggle-darkmode" type="checkbox" class="js-toggle-darkmode">
+              <div>
+                <span class="icon-moon moon" aria-hidden="true"></span>
+                <span class="icon-sunny sun" aria-hidden="true"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+
+<main class="main-wrap">
+    
+  <section class="m-hero with-picture" data-aos="fade">
+    <div class="m-hero__picture in-post">
+      <img
+        srcset="
+          https://images.unsplash.com/photo-1601132359864-c974e79890ac?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDl8fHJvYm90fGVufDB8fHx8MTY3MTgxMTI1MQ&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;300 300w,
+          https://images.unsplash.com/photo-1601132359864-c974e79890ac?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDl8fHJvYm90fGVufDB8fHx8MTY3MTgxMTI1MQ&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;600 600w,
+          https://images.unsplash.com/photo-1601132359864-c974e79890ac?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDl8fHJvYm90fGVufDB8fHx8MTY3MTgxMTI1MQ&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;1000 1000w,
+          https://images.unsplash.com/photo-1601132359864-c974e79890ac?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDl8fHJvYm90fGVufDB8fHx8MTY3MTgxMTI1MQ&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000 2000w
+        "
+        sizes="(max-width: 600px) 600px, (max-width: 1000px) 1000px, 2000px"
+        src="https://images.unsplash.com/photo-1601132359864-c974e79890ac?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDl8fHJvYm90fGVufDB8fHx8MTY3MTgxMTI1MQ&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;1000"
+        alt=""
+      />
+    </div>
+    </section>
+        <div class="l-wrapper in-caption">
+          <p class="m-small-text align-center">
+            Photo by <a href="https://unsplash.com/@aideal?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit">Aideal Hwa</a> / <a href="https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit">Unsplash</a>
+          </p>
+        </div>
+
+  <article>
+    <div class="l-content in-post">
+        <div class="l-wrapper in-post  js-aos-wrapper" data-aos="fade-up"
+          data-aos-delay="300">
+          <div
+            class="l-post-content js-progress-content">
+            <header class="m-heading">
+              <h1 class="m-heading__title in-post">Why AI will not replace developers</h1>
+              <div class="m-heading__meta">
+                <span class="m-heading__meta__time">Dec 23, 2022</span>
+              </div>
+            </header>
+            <div class="pos-relative js-post-content">
+              <div class="m-share">
+                <div class="m-share__content js-sticky">
+                  <a href="https://www.facebook.com/sharer/sharer.php?u=/chat/"
+                    class="m-icon-button filled in-share" target="_blank" rel="noopener" aria-label="Facebook">
+                    <span class="icon-facebook" aria-hidden="true"></span>
+                  </a>
+                  <a href="https://twitter.com/intent/tweet?text=Why%20AI%20will%20not%20replace%20developers&url=/chat/"
+                    class="m-icon-button filled in-share" target="_blank" rel="noopener" aria-label="Twitter">
+                    <span class="icon-twitter" aria-hidden="true"></span>
+                  </a>
+                  <button class="m-icon-button filled in-share progress js-scrolltop" aria-label="Scroll to top">
+                    <span class="icon-arrow-top" aria-hidden="true"></span>
+                    <svg aria-hidden="true">
+                      <circle class="progress-ring__circle js-progress" fill="transparent" r="0" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <p>AI has recently been thrown around as a 'buzz term'. In the last year, it seemed as if any company with the most basic of  logic was plastered with one or more of words 'AI', 'Artificial intelligence or 'real AI.'</p><p>While the true definition of AI is up for debate, companies are developing complex deep learning. One such company OpenAI has developed GPT-3. GPT-3, as described by its authors, is an 'autoregressive language model that uses deep learning to produce human-like text'.</p><p>In the last few months, we have seen OpenAI use this model as a basis for many products and showcases. For example, you may be familiar with GitHub co-pilot, a code completion suggestion tool if you are a developer. If you are an artist, you may be familiar with regenerative art or other products such as DAL-E, also created by OpenAI, which generates digital images from natural language descriptions.</p><p>On November 30, 2022, OpenAI released its latest beta, ChatGPT. ChatGPT uses a GPT-3 algorithm to create a chatbot that can hold context between prompts and can be used for many things, such as explaining complex theories,  writing articles and writing code. It is the latter example that caused me to ask the question, "will AI replace the need for developers"?</p><p>Instead of creating a post outlining and defending the need for developers in a world of AI, why not get ChatGPT to do it for me? The following are the prompts I used to create the post.</p><hr><h2 id="generating-linkedin-post">Generating LinkedIn Post</h2><p></p><p><strong>Write a thought-provoking article about why we still need developers when we have tools like chatGPT. Make it a size that will fit in a LinkedIn post</strong></p><blockquote>Despite the impressive capabilities of tools like chatGPT, which uses artificial intelligence to generate human-like text, there are several reasons why we will still need developers in the tech industry. <br><br>While chatGPT and similar tools can generate coherent text, they are not capable of creative problem-solving or out-of-the-box thinking in the way that human developers are. They also lack the ability to understand the nuances and complexities of human language and are not able to adapt to new technologies and environments. Additionally, developers bring valuable skills and responsibilities such as testing and debugging software, collaborating with team members, and working with customers and clients, which chatGPT and other AI-powered tools are not capable of. In conclusion, developers will continue to be an essential part of the tech industry, even with the existence of chatGPT and similar technologies.</blockquote><p><strong>Make the main arguments into bullet points.</strong></p><blockquote>Despite the impressive capabilities of tools like chatGPT, they are not capable of creative problem-solving or out-of-the-box thinking in the way that human developers are.<br><br>ChatGPT and similar tools are not able to fully grasp the subtleties of language or the context in which certain words and phrases are used.<br><br>ChatGPT and similar tools are not able to learn and adapt to new programming languages, frameworks, and platforms in the same way that human developers can.<br><br>Developers bring valuable skills and responsibilities such as testing and debugging software, collaborating with team members, and working with customers and clients, which chatGPT and other AI-powered tools are not capable of.</blockquote><p><strong>Add a catchy aggressive one-line introduction.</strong></p><blockquote>ChatGPT may be able to generate human-like text, but it can never replace the creativity, adaptability, and human understanding of a developer.</blockquote><hr><p>Perfect... A post was generated in a matter of minutes to defend developers worldwide.</p>
+            </div>
+          </div>
+        </div>
+        <section class="m-author">
+          <div class="m-author__content">
+            <div class="m-author__picture">
+              <a href="/author/ashley/" class="m-author-picture" aria-label="Ashley Buckingham">
+                  <div style="background-image: url(/content/images/2023/01/T016PALP94Y-U01DN9PGZ6W-e92dcddddf2a-512.jpeg);"></div>
+              </a>
+            </div>
+            <div class="m-author__info">
+              <h4 class="m-author__name">
+                <a href="/author/ashley/">Ashley Buckingham</a>
+              </h4>
+                <p class="m-author__bio">Tech lead, Developer, Hacker</p>
+              <ul class="m-author-links">
+                  <li>
+                    <a href="https://uk.linkedin.com/in/ashleybuckingham" target="_blank" rel="noopener" aria-label="Website">
+                      <span class="icon-globe" aria-hidden="true"></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://twitter.com/@cur50r_" target="_blank" rel="noopener" aria-label="Twitter">
+                      <span class="icon-twitter" aria-hidden="true"></span>
+                    </a>
+                  </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+
+    </div>
+  </article>
+</main>
+
+
+
+    
+<div class="m-search js-search" role="dialog" aria-modal="true" aria-label="Search">
+  <button class="m-icon-button outlined as-close-search js-close-search" aria-label="Close search">
+    <span class="icon-close" aria-hidden="true"></span>
+  </button>
+  <div class="m-search__content">
+    <form class="m-search__form">
+      <div class="pos-relative">
+        <span class="icon-search m-search-icon" aria-hidden="true"></span>
+        <label for="search-input" class="sr-only">
+          Type to search
+        </label>
+        <input id="search-input" type="text" class="m-input in-search js-input-search" placeholder="Type to search">
+      </div>
+    </form>
+    <div class="js-search-results hide"></div>
+    <p class="m-not-found align-center hide js-no-results">
+      No results for your search, please try with something else.
+    </p>
+  </div>
+</div>
+
+    
+<footer class="m-footer">
+  <div class="m-footer__content">
+    <nav class="m-footer-social">
+      <a href="/rss" aria-label="RSS">
+        <span class="icon-rss" aria-hidden="true"></span>
+      </a>
+    </nav>
+    <p class="m-footer-copyright">
+      <span>Ashley Buckingham - Blog &copy; 2023</span>
+      <span>&nbsp; &bull; &nbsp;</span>
+      <span>Published with <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a></span>
+    </p>
+  </div>
+</footer>
+
+    <script defer src="/assets/js/manifest.js?v=cdb99f323f"></script>
+    <script defer src="/assets/js/vendor/content-api.min.js?v=cdb99f323f"></script>
+    <script defer src="/assets/js/vendor.js?v=cdb99f323f"></script>
+    <script defer src="/assets/js/app.js?v=cdb99f323f"></script>
+
+      <script defer src="/assets/js/post.js?v=cdb99f323f"></script>
+
+
+    
+  </body>
+</html>
