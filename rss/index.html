@@ -1,4 +1,429 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Ashley Buckingham - Blog]]></title><description><![CDATA[Code | Travel | Powered by sun]]></description><link>/</link><image><url>/favicon.png</url><title>Ashley Buckingham - Blog</title><link>/</link></image><generator>Ghost 5.74</generator><lastBuildDate>Sun, 26 Nov 2023 21:49:15 GMT</lastBuildDate><atom:link href="/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[NFT Viewer]]></title><description><![CDATA[The NFT viewer updates in realtime to show the latest artwork being added to the Solona blockchain. Hover on picture for details.]]></description><link>/nft-viewer/</link><guid isPermaLink="false">63c08b02d258e00001f00258</guid><dc:creator><![CDATA[Ashley Buckingham]]></dc:creator><pubDate>Sun, 22 Jan 2023 22:36:00 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1642525027649-00d7397a6d4a?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDR8fG5mdHxlbnwwfHx8fDE2NzM1NjMzMDg&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<img src="https://images.unsplash.com/photo-1642525027649-00d7397a6d4a?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDR8fG5mdHxlbnwwfHx8fDE2NzM1NjMzMDg&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" alt="NFT Viewer"><p><em>The NFT viewer updates in realtime to show the latest artwork being added to the Solona blockchain. Hover on picture for details.</em></p><!--kg-card-begin: html--><iframe src="https://api.noportfol.io/nft" height="100%" style="height: 830px; width: 100%;"></iframe><!--kg-card-end: html--><p></p><p>It&apos;s 2022, and the world has gone cryptocurrency crazy. Everyone from friends in the pub to colleagues in the boardroom talked about cryptocurrency, blockchain, and various dogs going to the moon.</p><p></p><p>Then came the flood of NFTs. Non-fungible tokens (NFTs) are used to represent digital items such as artwork, music, videos, and other types of digital content. Because each NFT is unique, it can&apos;t be replaced or exchanged for something else, like a traditional digital file can be. This makes them valuable, and they can be bought and sold like other types of assets. When you purchase an NFT, you are buying the rights to that specific digital item and you can prove your ownership via the blockchain.</p><p></p><p>A blockchain is a digital ledger that records transactions across a network of computers. It&apos;s called a &quot;blockchain&quot; because it is made up of blocks of data that are linked together in a chain. Each block contains a record of multiple transactions, and once a block is added to the chain, it cannot be altered. The biggest advantage of using a blockchain is that it is decentralized, meaning that it is not controlled by a single entity, it is open-source and maintained by a network of computers around the world, this makes it more secure and less susceptible to fraud.</p><p></p><p>While the use and success of NFT are highly debatable, I enjoy looking at the unique and beautiful artwork being created and added to the blockchain every second. This is why I created the NFT viewer displayed at the top of the article.</p><hr><h2 id="how-does-it-work-tech-bit">How does it work (Tech Bit)?</h2><p></p><p><strong>Step 1 - Choosing a blockchain</strong><br>NFTs are built on blockchain technology, a digital ledger that records transactions securely and transparently. There are many different blockchains available, but I choose Solana.</p><p>One of the most significant advantages of Solana for NFTs is its fast transaction speeds. Solana can process up to 65,000 transactions per second, which is much faster than other popular blockchain platforms like Ethereum. This means that buying and selling NFTs on Solana can be done quickly and with minimal delays.</p><p><br><strong>Step 2 - Connecting to the blockchain.</strong></p><p>To connect to the blockchain, I used quickNode. This allows me to query the Solana blockchain without hosting a node myself.</p><figure class="kg-card kg-image-card"><img src="/content/images/2023/01/carbon.png" class="kg-image" alt="NFT Viewer" loading="lazy" width="1534" height="476" srcset="/content/images/size/w600/2023/01/carbon.png 600w, /content/images/size/w1000/2023/01/carbon.png 1000w, /content/images/2023/01/carbon.png 1534w" sizes="(min-width: 720px) 720px"></figure><p><strong>Step 3 - Getting the NFT from the blockchain</strong><br></p><p>This part was tricky, and there were a few hoops I had to jump through. The result was an application that followed the steps below:<br></p><p>a. Get the latest block from the blockchain.</p><figure class="kg-card kg-image-card"><img src="/content/images/2023/01/carbon-2.png" class="kg-image" alt="NFT Viewer" loading="lazy" width="1300" height="1224" srcset="/content/images/size/w600/2023/01/carbon-2.png 600w, /content/images/size/w1000/2023/01/carbon-2.png 1000w, /content/images/2023/01/carbon-2.png 1300w" sizes="(min-width: 720px) 720px"></figure><p>b. Loop through all the transactions and filter the ones that have amount=1 (NFTs are unique and therefore show as a maximum of 1)</p><figure class="kg-card kg-image-card"><img src="/content/images/2023/01/carbon-3.png" class="kg-image" alt="NFT Viewer" loading="lazy" width="1316" height="884" srcset="/content/images/size/w600/2023/01/carbon-3.png 600w, /content/images/size/w1000/2023/01/carbon-3.png 1000w, /content/images/2023/01/carbon-3.png 1316w" sizes="(min-width: 720px) 720px"></figure><p>c. Get the mint Public key from the transaction.</p><figure class="kg-card kg-image-card"><img src="/content/images/2023/01/carbon-4.png" class="kg-image" alt="NFT Viewer" loading="lazy" width="1316" height="884" srcset="/content/images/size/w600/2023/01/carbon-4.png 600w, /content/images/size/w1000/2023/01/carbon-4.png 1000w, /content/images/2023/01/carbon-4.png 1316w" sizes="(min-width: 720px) 720px"></figure><p>d. Pass the key to metaplex to get the metadata of the transaction</p><figure class="kg-card kg-image-card"><img src="/content/images/2023/01/carbon-5.png" class="kg-image" alt="NFT Viewer" loading="lazy" width="2000" height="1162" srcset="/content/images/size/w600/2023/01/carbon-5.png 600w, /content/images/size/w1000/2023/01/carbon-5.png 1000w, /content/images/size/w1600/2023/01/carbon-5.png 1600w, /content/images/2023/01/carbon-5.png 2048w" sizes="(min-width: 720px) 720px"></figure><p>e. Fetch the content of the URL found in the metadata. This returns the data required to get the image and information.</p><figure class="kg-card kg-image-card"><img src="/content/images/2023/01/carbon-6.png" class="kg-image" alt="NFT Viewer" loading="lazy" width="2000" height="2523" srcset="/content/images/size/w600/2023/01/carbon-6.png 600w, /content/images/size/w1000/2023/01/carbon-6.png 1000w, /content/images/size/w1600/2023/01/carbon-6.png 1600w, /content/images/2023/01/carbon-6.png 2048w" sizes="(min-width: 720px) 720px"></figure>]]></content:encoded></item><item><title><![CDATA[Why AI will not replace developers]]></title><description><![CDATA[<p>AI has recently been thrown around as a &apos;buzz term&apos;. In the last year, it seemed as if any company with the most basic of &#xA0;logic was plastered with one or more of words &apos;AI&apos;, &apos;Artificial intelligence or &apos;real AI.&apos;</p><p>While the</p>]]></description><link>/chat/</link><guid isPermaLink="false">63a584d33b62b20001eb7741</guid><dc:creator><![CDATA[Ashley Buckingham]]></dc:creator><pubDate>Fri, 23 Dec 2022 11:44:53 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1601132359864-c974e79890ac?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDl8fHJvYm90fGVufDB8fHx8MTY3MTgxMTI1MQ&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<img src="https://images.unsplash.com/photo-1601132359864-c974e79890ac?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDl8fHJvYm90fGVufDB8fHx8MTY3MTgxMTI1MQ&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" alt="Why AI will not replace developers"><p>AI has recently been thrown around as a &apos;buzz term&apos;. In the last year, it seemed as if any company with the most basic of &#xA0;logic was plastered with one or more of words &apos;AI&apos;, &apos;Artificial intelligence or &apos;real AI.&apos;</p><p>While the true definition of AI is up for debate, companies are developing complex deep learning. One such company OpenAI has developed GPT-3. GPT-3, as described by its authors, is an &apos;autoregressive language model that uses deep learning to produce human-like text&apos;.</p><p>In the last few months, we have seen OpenAI use this model as a basis for many products and showcases. For example, you may be familiar with GitHub co-pilot, a code completion suggestion tool if you are a developer. If you are an artist, you may be familiar with regenerative art or other products such as DAL-E, also created by OpenAI, which generates digital images from natural language descriptions.</p><p>On November 30, 2022, OpenAI released its latest beta, ChatGPT. ChatGPT uses a GPT-3 algorithm to create a chatbot that can hold context between prompts and can be used for many things, such as explaining complex theories, &#xA0;writing articles and writing code. It is the latter example that caused me to ask the question, &quot;will AI replace the need for developers&quot;?</p><p>Instead of creating a post outlining and defending the need for developers in a world of AI, why not get ChatGPT to do it for me? The following are the prompts I used to create the post.</p><hr><h2 id="generating-linkedin-post">Generating LinkedIn Post</h2><p></p><p><strong>Write a thought-provoking article about why we still need developers when we have tools like chatGPT. Make it a size that will fit in a LinkedIn post</strong></p><blockquote>Despite the impressive capabilities of tools like chatGPT, which uses artificial intelligence to generate human-like text, there are several reasons why we will still need developers in the tech industry. <br><br>While chatGPT and similar tools can generate coherent text, they are not capable of creative problem-solving or out-of-the-box thinking in the way that human developers are. They also lack the ability to understand the nuances and complexities of human language and are not able to adapt to new technologies and environments. Additionally, developers bring valuable skills and responsibilities such as testing and debugging software, collaborating with team members, and working with customers and clients, which chatGPT and other AI-powered tools are not capable of. In conclusion, developers will continue to be an essential part of the tech industry, even with the existence of chatGPT and similar technologies.</blockquote><p><strong>Make the main arguments into bullet points.</strong></p><blockquote>Despite the impressive capabilities of tools like chatGPT, they are not capable of creative problem-solving or out-of-the-box thinking in the way that human developers are.<br><br>ChatGPT and similar tools are not able to fully grasp the subtleties of language or the context in which certain words and phrases are used.<br><br>ChatGPT and similar tools are not able to learn and adapt to new programming languages, frameworks, and platforms in the same way that human developers can.<br><br>Developers bring valuable skills and responsibilities such as testing and debugging software, collaborating with team members, and working with customers and clients, which chatGPT and other AI-powered tools are not capable of.</blockquote><p><strong>Add a catchy aggressive one-line introduction.</strong></p><blockquote>ChatGPT may be able to generate human-like text, but it can never replace the creativity, adaptability, and human understanding of a developer.</blockquote><hr><p>Perfect... A post was generated in a matter of minutes to defend developers worldwide.</p>]]></content:encoded></item><item><title><![CDATA[OpenWRT: Travel router]]></title><description><![CDATA[<p></p><p>In March 2020, President Donald Trump made an executive order banning tourists from entering the USA.</p><p>After 20 months, in November 2021, President Biden reopened the US, and travel resumed. In May 2022, I finally arrived back in Las Vegas after two years of separation.</p><p>While I loved visiting, I</p>]]></description><link>/openwrt-travel-router/</link><guid isPermaLink="false">6307e6166b77e300015660cc</guid><dc:creator><![CDATA[Ashley Buckingham]]></dc:creator><pubDate>Thu, 25 Aug 2022 21:15:09 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1583474884909-230dac058b63?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDEwfHxyb3V0ZXJ8ZW58MHx8fHwxNjYxNDYyMDk4&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<img src="https://images.unsplash.com/photo-1583474884909-230dac058b63?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDEwfHxyb3V0ZXJ8ZW58MHx8fHwxNjYxNDYyMDk4&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=2000" alt="OpenWRT: Travel router"><p></p><p>In March 2020, President Donald Trump made an executive order banning tourists from entering the USA.</p><p>After 20 months, in November 2021, President Biden reopened the US, and travel resumed. In May 2022, I finally arrived back in Las Vegas after two years of separation.</p><p>While I loved visiting, I was shocked by the tactics some hotels used to scrape back the lost wages from the pandemic&#x2014;an increase in resort fees, lack of drink service and higher table minimums.</p><p>The tactic that affected me the most was limiting devices on the hotel Wi-Fi. I found most hotels would only allow you to connect only one or two devices to Wi-Fi within 24 hours. After that, any additional device would cost 35$ a day!</p><h3 id="openwrt">OpenWRT</h3><p>I will be travelling back in the coming weeks, so I spent some time researching a solution and found OpenWRT. Using OpenWRT, I could create a small travel router that would enable me to:</p><ul><li>Connect multiple devices to one connection, removing device limits</li><li>Use a VPN connection to secure all my internet traffic by default</li><li>Set up the connection between all my devices to the router once, speeding up the connection time between hotels.</li></ul><p>I first decided to look into using a USB WIFI adapter with my Macbook to let me connect my laptop to the Wi-Fi and then share the connection through the external USB Wi-Fi. However, I soon found that support for external Wi-Fi adapters was lacking in the new MacBook pros.</p><p>I soon settled on using a raspberry pi, a small credit card-sized computer. Like the Macbook, the Pi has onboard Wi-Fi that I could use to connect to the hotel; I would then use my USB wireless adapter to connect to my other devices. After watching the helpful tutorial by NETWORKCHUCK, I purchased the RT5370 for &#xA3;7.50.</p><figure class="kg-card kg-image-card"><img src="/content/images/2022/08/516PzeiQ0nL._AC_SL1000_.jpg" class="kg-image" alt="OpenWRT: Travel router" loading="lazy" width="956" height="776" srcset="/content/images/size/w600/2022/08/516PzeiQ0nL._AC_SL1000_.jpg 600w, /content/images/2022/08/516PzeiQ0nL._AC_SL1000_.jpg 956w" sizes="(min-width: 720px) 720px"></figure><p> &#xA0;</p><p>I then downloaded the raspberry pi image from the OpenWRT website <a href="https://openwrt.org/downloads?ref=localhost">https://openwrt.org/downloads</a>, flashed the SD card and inserted it into the Raspberry Pi.</p><p>Next, I connected the pi to the MacBook using an ethernet cable. And ran the following commands</p><!--kg-card-begin: html--><iframe src="https://carbon.now.sh/embed?bg=rgba%28255%2C255%2C255%2C0%29&amp;t=material&amp;wt=none&amp;l=application%2Fx-sh&amp;width=680&amp;ds=true&amp;dsyoff=20px&amp;dsblur=68px&amp;wc=true&amp;wa=true&amp;pv=56px&amp;ph=56px&amp;ln=false&amp;fl=1&amp;fm=Hack&amp;fs=14px&amp;lh=133%25&amp;si=false&amp;es=2x&amp;wm=false&amp;code=%2523%2520ssh%2520to%2520pi%250Assh%2520root%2540192.168.1.1%250A%250A%2523%2520change%2520password%250Aroot%2540OpenWrt%253A%7E%2520passwd%250Alogmein123%250A%250A%2523%2520Edit%2520the%2520network%2520file%250Aroot%2540OpenWrt%253A%7E%2520vi%2520etc%252Fconfig%252Fnetwork%250A%250Aconfig%2520interface%2520%27loopback%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520device%2520%27lo%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520proto%2520%27static%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520ipaddr%2520%27127.0.0.1%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520netmask%2520%27255.0.0.0%27%250A%250Aconfig%2520globals%2520%27globals%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520ula_prefix%2520%27fdb4%253A089f%253A87e6%253A%253A%252F48%27%250A%250Aconfig%2520device%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520name%2520%27br-lan%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520type%2520%27bridge%27%250A%2520%2520%2520%2520%2520%2520%2520%2520list%2520ports%2520%27eth0%27%250A%250Aconfig%2520interface%2520%27lan%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520device%2520%27br-lan%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520proto%2520%27static%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520ipaddr%2520%2710.71.71.1%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520netmask%2520%27255.255.255.0%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520ip6assign%2520%2760%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520force_link%2520%271%27%250A%250Aconfig%2520interface%2520%27wwan%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520proto%2520%27dhcp%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520peerdns%2520%270%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520dns%2520%271.1.1.1%25208.8.8.8%27%250A%250Aconfig%2520interface%2520%27vpnclient%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520ifname%2520%27tun0%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520proto%2520%27none%27%250A%250A%2523%2520update%2520firewall%250A%250Aroot%2540OpenWrt%253A%7E%2520vi%2520etc%252Fconfig%252Ffirewall%250Aconfig%2520zone%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520name%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520wan%250A%2520%2520%2520%2520%2520%2520%2520%2520list%2520%2520%2520network%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%27wan%27%250A%2520%2520%2520%2520%2520%2520%2520%2520list%2520%2520%2520network%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%27wan6%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520input%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520ACCEPT%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520output%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520ACCEPT%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520forward%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520REJECT%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520masq%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%25201%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520mtu_fix%2520%2520%2520%2520%2520%2520%2520%2520%2520%25201%250A%250A%2523%2520reboot%250Aroot%2540OpenWrt%253A%7E%2520reboot%250A%250A%2523%2520setup%2520wireless%250Aroot%2540OpenWrt%253A%7E%2523%2520vi%2520%252Fetc%252Fconfig%252Fwireless%250Aconfig%2520wifi-device%2520%27radio0%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520type%2520%27mac80211%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520path%2520%27platform%252Fsoc%252Ffe300000.mmcnr%252Fmmc_host%252Fmmc1%252Fmmc1%253A0001%252Fmmc1%253A0001%253A1%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520channel%2520%277%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520band%2520%2711g%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520htmode%2520%27VHT20%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520disabled%2520%270%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520short_gi_40%2520%270%27%250A%250Aconfig%2520wifi-iface%2520%27default_radio0%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520device%2520%27radio0%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520network%2520%27lan%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520mode%2520%27ap%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520ssid%2520%27OpenWrt%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520encryption%2520%27none%27%250A%250A%2523%2520commit%2520changes%250Aroot%2540OpenWrt%253A%7E%2520uci%2520commit%2520wireless%250Aroot%2540OpenWrt%253A%7E%2520wifi%250A%250A%2523%2520install%2520driver%250Aopkg%2520update%250A%250Aopkg%2520install%2520kmod-rt2800-lib%2520kmod-rt2800-usb%2520kmod-rt2x00-lib%2520kmod-rt2" style="width: 100%; height: 2508px; border:0; transform: scale(1); overflow:hidden;" sandbox="allow-scripts allow-same-origin">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Ashley Buckingham - Blog]]></title><description><![CDATA[Code | Travel | Photography]]></description><link>/</link><image><url>/favicon.png</url><title>Ashley Buckingham - Blog</title><link>/</link></image><generator>Ghost 5.74</generator><lastBuildDate>Tue, 28 Nov 2023 10:40:21 GMT</lastBuildDate><atom:link href="/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[28/11/23 Photo Challenge]]></title><description><![CDATA[<!--kg-card-begin: html-->
+<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C0L7JYNIk_B/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="
+    background: #fff;
+    border: 0;
+    border-radius: 3px;
+    box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5), 0 1px 10px 0 rgba(0, 0, 0, 0.15);
+    margin: 1px;
+    max-width: 100%;
+    min-width: 326px;
+    padding: 0;
+    width: 99.375%;
+    width: -webkit-calc(100% - 2px);
+    width: calc(100% - 2px);
+  ">
+  <div style="padding: 16px">
+    <a href="https://www.instagram.com/p/C0L7JYNIk_B/?utm_source=ig_embed&amp;utm_campaign=loading" style="
+        background: #ffffff;
+        line-height: 0;
+        padding: 0 0;
+        text-align: center;
+        text-decoration: none;
+        width: 100%;
+      " target="_blank">
+      <div style="display: flex; flex-direction: row; align-items: center">
+        <div style="
+            background-color: #f4f4f4;
+            border-radius: 50%;
+            flex-grow: 0;
+            height: 40px;
+            margin-right: 14px;
+            width: 40px;
+          "></div>
+        <div style="
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            justify-content: center;
+          ">
+          <div style="
+              background-color: #f4f4f4;
+              border-radius: 4px;
+              flex-grow: 0;
+              height: 14px;
+              margin-bottom: 6px;
+              width: 100px;
+            "></div>
+          <div style="
+              background-color: #f4f4f4;
+              border-radius: 4px;
+              flex-grow: 0;
+              height: 14px;
+              width: 60px;
+            "></div>
+        </div>
+      </div>
+      <div style="padding: 19% 0"></div>
+      <div style="display: block; height: 50px; margin: 0 auto 12px; width: 50px">
+        <svg width="50px" height="50px" viewbox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink">
+          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g transform="translate(-511.000000, -20.000000)" fill="#000000">
+              <g>
+                <path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"/>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <div style="padding-top: 8px">
+        <div style="
+            color: #3897f0;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 550;
+            line-height: 18px;
+          ">
+          View this post on Instagram
+        </div>
+      </div>
+      <div style="padding: 12.5% 0"></div>
+      <div style="
+          display: flex;
+          flex-direction: row;
+          margin-bottom: 14px;
+          align-items: center;
+        ">
+        <div>
+          <div style="
+              background-color: #f4f4f4;
+              border-radius: 50%;
+              height: 12.5px;
+              width: 12.5px;
+              transform: translateX(0px) translateY(7px);
+            "></div>
+          <div style="
+              background-color: #f4f4f4;
+              height: 12.5px;
+              transform: rotate(-45deg) translateX(3px) translateY(1px);
+              width: 12.5px;
+              flex-grow: 0;
+              margin-right: 14px;
+              margin-left: 2px;
+            "></div>
+          <div style="
+              background-color: #f4f4f4;
+              border-radius: 50%;
+              height: 12.5px;
+              width: 12.5px;
+              transform: translateX(9px) translateY(-18px);
+            "></div>
+        </div>
+        <div style="margin-left: 8px">
+          <div style="
+              background-color: #f4f4f4;
+              border-radius: 50%;
+              flex-grow: 0;
+              height: 20px;
+              width: 20px;
+            "></div>
+          <div style="
+              width: 0;
+              height: 0;
+              border-top: 2px solid transparent;
+              border-left: 6px solid #f4f4f4;
+              border-bottom: 2px solid transparent;
+              transform: translateX(16px) translateY(-4px) rotate(30deg);
+            "></div>
+        </div>
+        <div style="margin-left: auto">
+          <div style="
+              width: 0px;
+              border-top: 8px solid #f4f4f4;
+              border-right: 8px solid transparent;
+              transform: translateY(16px);
+            "></div>
+          <div style="
+              background-color: #f4f4f4;
+              flex-grow: 0;
+              height: 12px;
+              width: 16px;
+              transform: translateY(-4px);
+            "></div>
+          <div style="
+              width: 0;
+              height: 0;
+              border-top: 8px solid #f4f4f4;
+              border-left: 8px solid transparent;
+              transform: translateY(-4px) translateX(8px);
+            "></div>
+        </div>
+      </div>
+      <div style="
+          display: flex;
+          flex-direction: column;
+          flex-grow: 1;
+          justify-content: center;
+          margin-bottom: 24px;
+        ">
+        <div style="
+            background-color: #f4f4f4;
+            border-radius: 4px;
+            flex-grow: 0;
+            height: 14px;
+            margin-bottom: 6px;
+            width: 224px;
+          "></div>
+        <div style="
+            background-color: #f4f4f4;
+            border-radius: 4px;
+            flex-grow: 0;
+            height: 14px;
+            width: 144px;
+          "></div></div></a>
+    <p style="
+        color: #c9c8cd;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        line-height: 17px;
+        margin-bottom: 0;
+        margin-top: 8px;
+        overflow: hidden;
+        padding: 8px 0 7px;
+        text-align: center;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      ">
+      <a href="https://www.instagram.com/p/C0L7JYNIk_B/?utm_source=ig_embed&amp;utm_campaign=loading" style="
+          color: #c9c8cd;
+          font-family: Arial, sans-serif;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: normal;
+          line-height: 17px;
+          text-decoration: none;
+        " target="_blank">A post shared by Ashley Buckingham (@ashley.james.buckingham)</a>
+    </p>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+
+<!--kg-card-end: html-->
+<h3 id="description">Description</h3><p>In the timeless monochrome of this photo, a guard stands with ceremonial elegance at Horse Guards Parade in London.<br><br>A symbol of tradition and discipline, they embody a working duty often mistaken for mere pageantry.</p>]]></description><link>/28-11-23/</link><guid isPermaLink="false">6565c089a8c7e60001812b67</guid><dc:creator><![CDATA[Ashley Buckingham]]></dc:creator><pubDate>Tue, 28 Nov 2023 10:28:03 GMT</pubDate><media:content url="/content/images/2023/11/IMG_0386.jpg" medium="image"/><content:encoded><![CDATA[
+<!--kg-card-begin: html-->
+<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C0L7JYNIk_B/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="
+    background: #fff;
+    border: 0;
+    border-radius: 3px;
+    box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5), 0 1px 10px 0 rgba(0, 0, 0, 0.15);
+    margin: 1px;
+    max-width: 100%;
+    min-width: 326px;
+    padding: 0;
+    width: 99.375%;
+    width: -webkit-calc(100% - 2px);
+    width: calc(100% - 2px);
+  ">
+  <div style="padding: 16px">
+    <a href="https://www.instagram.com/p/C0L7JYNIk_B/?utm_source=ig_embed&amp;utm_campaign=loading" style="
+        background: #ffffff;
+        line-height: 0;
+        padding: 0 0;
+        text-align: center;
+        text-decoration: none;
+        width: 100%;
+      " target="_blank">
+      <div style="display: flex; flex-direction: row; align-items: center">
+        <div style="
+            background-color: #f4f4f4;
+            border-radius: 50%;
+            flex-grow: 0;
+            height: 40px;
+            margin-right: 14px;
+            width: 40px;
+          "></div>
+        <div style="
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            justify-content: center;
+          ">
+          <div style="
+              background-color: #f4f4f4;
+              border-radius: 4px;
+              flex-grow: 0;
+              height: 14px;
+              margin-bottom: 6px;
+              width: 100px;
+            "></div>
+          <div style="
+              background-color: #f4f4f4;
+              border-radius: 4px;
+              flex-grow: 0;
+              height: 14px;
+              width: 60px;
+            "></div>
+        </div>
+      </div>
+      <div style="padding: 19% 0"></div>
+      <div style="display: block; height: 50px; margin: 0 auto 12px; width: 50px">
+        <svg width="50px" height="50px" viewbox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink">
+          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g transform="translate(-511.000000, -20.000000)" fill="#000000">
+              <g>
+                <path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"/>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <div style="padding-top: 8px">
+        <div style="
+            color: #3897f0;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 550;
+            line-height: 18px;
+          ">
+          View this post on Instagram
+        </div>
+      </div>
+      <div style="padding: 12.5% 0"></div>
+      <div style="
+          display: flex;
+          flex-direction: row;
+          margin-bottom: 14px;
+          align-items: center;
+        ">
+        <div>
+          <div style="
+              background-color: #f4f4f4;
+              border-radius: 50%;
+              height: 12.5px;
+              width: 12.5px;
+              transform: translateX(0px) translateY(7px);
+            "></div>
+          <div style="
+              background-color: #f4f4f4;
+              height: 12.5px;
+              transform: rotate(-45deg) translateX(3px) translateY(1px);
+              width: 12.5px;
+              flex-grow: 0;
+              margin-right: 14px;
+              margin-left: 2px;
+            "></div>
+          <div style="
+              background-color: #f4f4f4;
+              border-radius: 50%;
+              height: 12.5px;
+              width: 12.5px;
+              transform: translateX(9px) translateY(-18px);
+            "></div>
+        </div>
+        <div style="margin-left: 8px">
+          <div style="
+              background-color: #f4f4f4;
+              border-radius: 50%;
+              flex-grow: 0;
+              height: 20px;
+              width: 20px;
+            "></div>
+          <div style="
+              width: 0;
+              height: 0;
+              border-top: 2px solid transparent;
+              border-left: 6px solid #f4f4f4;
+              border-bottom: 2px solid transparent;
+              transform: translateX(16px) translateY(-4px) rotate(30deg);
+            "></div>
+        </div>
+        <div style="margin-left: auto">
+          <div style="
+              width: 0px;
+              border-top: 8px solid #f4f4f4;
+              border-right: 8px solid transparent;
+              transform: translateY(16px);
+            "></div>
+          <div style="
+              background-color: #f4f4f4;
+              flex-grow: 0;
+              height: 12px;
+              width: 16px;
+              transform: translateY(-4px);
+            "></div>
+          <div style="
+              width: 0;
+              height: 0;
+              border-top: 8px solid #f4f4f4;
+              border-left: 8px solid transparent;
+              transform: translateY(-4px) translateX(8px);
+            "></div>
+        </div>
+      </div>
+      <div style="
+          display: flex;
+          flex-direction: column;
+          flex-grow: 1;
+          justify-content: center;
+          margin-bottom: 24px;
+        ">
+        <div style="
+            background-color: #f4f4f4;
+            border-radius: 4px;
+            flex-grow: 0;
+            height: 14px;
+            margin-bottom: 6px;
+            width: 224px;
+          "></div>
+        <div style="
+            background-color: #f4f4f4;
+            border-radius: 4px;
+            flex-grow: 0;
+            height: 14px;
+            width: 144px;
+          "></div></div></a>
+    <img src="/content/images/2023/11/IMG_0386.jpg" alt="28/11/23 Photo Challenge"><p style="
+        color: #c9c8cd;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        line-height: 17px;
+        margin-bottom: 0;
+        margin-top: 8px;
+        overflow: hidden;
+        padding: 8px 0 7px;
+        text-align: center;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      ">
+      <a href="https://www.instagram.com/p/C0L7JYNIk_B/?utm_source=ig_embed&amp;utm_campaign=loading" style="
+          color: #c9c8cd;
+          font-family: Arial, sans-serif;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: normal;
+          line-height: 17px;
+          text-decoration: none;
+        " target="_blank">A post shared by Ashley Buckingham (@ashley.james.buckingham)</a>
+    </p>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+
+<!--kg-card-end: html-->
+<h3 id="description">Description</h3><p>In the timeless monochrome of this photo, a guard stands with ceremonial elegance at Horse Guards Parade in London.<br><br>A symbol of tradition and discipline, they embody a working duty often mistaken for mere pageantry.<br><br>As tourists capture this moment, let&apos;s not forget the guard&apos;s vital role in preserving London&apos;s heritage and ensuring its security.</p><h3 id="details">Details</h3><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Location</td>
+<td>London, UK</td>
+</tr>
+<tr>
+<td>Date</td>
+<td>Apr 7 2023</td>
+</tr>
+<tr>
+<td>Camera</td>
+<td>Canon R10 / 35mm / f/2.8</td>
+</tr>
+</tbody>
+</table>
+]]></content:encoded></item><item><title><![CDATA[27/11/23 - Code Challenge]]></title><description><![CDATA[<div class="kg-card kg-callout-card kg-callout-card-blue"><div class="kg-callout-emoji">&#x1F468;&#x200D;&#x1F4BB;</div><div class="kg-callout-text"><a href="https://leetcode.com/problems/join-two-arrays-by-id/?ref=localhost">2722. Join Two Arrays by ID</a></div></div><hr><h3 id="introduction">Introduction</h3><p>Hello, coding enthusiasts! We&apos;re about to embark on an interesting LeetCode challenge today: <em>Join Two Arrays by ID (Challenge 2722)</em>. This task might appear simple at first, but it&apos;s an excellent platform to delve into some</p>]]></description><link>/27-11-23-code-challange/</link><guid isPermaLink="false">6564e69ea8c7e60001812b46</guid><dc:creator><![CDATA[Ashley Buckingham]]></dc:creator><pubDate>Mon, 27 Nov 2023 19:03:40 GMT</pubDate><media:content url="/content/images/2023/11/DALL-E-2023-11-27-21.46.08---A-futuristic-hologram-of-a-calendar-icon--set-against-a-black-background.-The-calendar-icon-should-appear-to-be-floating-in-the-air--with-a-holographi.png" medium="image"/><content:encoded><![CDATA[<div class="kg-card kg-callout-card kg-callout-card-blue"><div class="kg-callout-emoji">&#x1F468;&#x200D;&#x1F4BB;</div><div class="kg-callout-text"><a href="https://leetcode.com/problems/join-two-arrays-by-id/?ref=localhost">2722. Join Two Arrays by ID</a></div></div><hr><h3 id="introduction">Introduction</h3><img src="/content/images/2023/11/DALL-E-2023-11-27-21.46.08---A-futuristic-hologram-of-a-calendar-icon--set-against-a-black-background.-The-calendar-icon-should-appear-to-be-floating-in-the-air--with-a-holographi.png" alt="27/11/23 - Code Challenge"><p>Hello, coding enthusiasts! We&apos;re about to embark on an interesting LeetCode challenge today: <em>Join Two Arrays by ID (Challenge 2722)</em>. This task might appear simple at first, but it&apos;s an excellent platform to delve into some of the more subtle aspects of JavaScript and discover some nifty optimization strategies. Let&apos;s take a journey through my coding process and insights!</p><h3 id="the-problem">The Problem</h3><p>Our task involves two arrays, <code>arr1</code> and <code>arr2</code>, each containing objects with an <code>id</code> field. We aim to merge them into a single array, <code>joinedArray</code>, following these guidelines:</p><ul><li>Merge objects using their <code>id</code> as the key.</li><li>If an <code>id</code> is found in both arrays, blend their properties, with <code>arr2</code> taking precedence over <code>arr1</code>.</li><li>Finally, sort <code>joinedArray</code> in ascending order based on the <code>id</code>.</li></ul><h3 id="initial-idea">Initial Idea</h3><p>To tackle this, I started by conceptualizing the function&apos;s structure. My plan was to iterate through <code>arr2</code>, check for the presence of each element in <code>arr1</code>, and perform one of two actions:</p><ul><li>If an element from <code>arr2</code> didn&apos;t exist in <code>arr1</code>, I&apos;d simply add it to <code>joinedArray</code>.</li><li>If it did exist, I&apos;d merge their properties, ensuring <code>arr2</code>&apos;s values override those from <code>arr1</code>.</li><li>The last step would be sorting <code>joinedArray</code> based on <code>id</code>.</li></ul><h3 id="locating-elements">Locating Elements</h3><p>Initially, I leaned towards using lodash but decided to stick to native JavaScript functions for a cleaner approach. I used <code>forEach</code> to traverse through <code>arr2</code> and utilized the <code>.find</code> method to check if an element already exists in <code>arr1</code>.</p><figure class="kg-card kg-image-card"><img src="/content/images/2023/11/carbon--1--1.png" class="kg-image" alt="27/11/23 - Code Challenge" loading="lazy" width="1664" height="328" srcset="/content/images/size/w600/2023/11/carbon--1--1.png 600w, /content/images/size/w1000/2023/11/carbon--1--1.png 1000w, /content/images/size/w1600/2023/11/carbon--1--1.png 1600w, /content/images/2023/11/carbon--1--1.png 1664w" sizes="(min-width: 720px) 720px"></figure><p>However, I realized I needed to know the specific index of the found element in <code>joinedArray</code>. Therefore, I replaced <code>.find</code> with <code>.findIndex</code>.</p><h3 id="upserting-values">Upserting Values</h3><p>The next step was to either add the new object to <code>joinedArray</code> or update the existing one. Adding was straightforward with <code>.push</code>. To update, I used the spread operator, ensuring a selective overwrite of properties:</p><figure class="kg-card kg-image-card"><img src="/content/images/2023/11/carbon--3-.png" class="kg-image" alt="27/11/23 - Code Challenge" loading="lazy" width="1360" height="328" srcset="/content/images/size/w600/2023/11/carbon--3-.png 600w, /content/images/size/w1000/2023/11/carbon--3-.png 1000w, /content/images/2023/11/carbon--3-.png 1360w" sizes="(min-width: 720px) 720px"></figure><h3 id="sorting-the-array">Sorting the Array</h3><p>Sorting <code>joinedArray</code> was a matter of applying the built-in <code>.sort</code> method with a custom comparator function:</p><figure class="kg-card kg-image-card"><img src="/content/images/2023/11/carbon--4-.png" class="kg-image" alt="27/11/23 - Code Challenge" loading="lazy" width="1360" height="328" srcset="/content/images/size/w600/2023/11/carbon--4-.png 600w, /content/images/size/w1000/2023/11/carbon--4-.png 1000w, /content/images/2023/11/carbon--4-.png 1360w" sizes="(min-width: 720px) 720px"></figure><h3 id="initial-solution">Initial solution</h3><figure class="kg-card kg-image-card"><img src="/content/images/2023/11/carbon--6-.png" class="kg-image" alt="27/11/23 - Code Challenge" loading="lazy" width="1360" height="850" srcset="/content/images/size/w600/2023/11/carbon--6-.png 600w, /content/images/size/w1000/2023/11/carbon--6-.png 1000w, /content/images/2023/11/carbon--6-.png 1360w" sizes="(min-width: 720px) 720px"></figure><h3 id="optimizing-with-map">Optimizing with Map</h3><p>The initial solution, though correct, was slow due to the <code>.findIndex</code> method. I then realized that a <code>Map</code> would be more efficient, especially for both lookup and value modification operations:</p><figure class="kg-card kg-image-card"><img src="/content/images/2023/11/carbon--5-.png" class="kg-image" alt="27/11/23 - Code Challenge" loading="lazy" width="1360" height="700" srcset="/content/images/size/w600/2023/11/carbon--5-.png 600w, /content/images/size/w1000/2023/11/carbon--5-.png 1000w, /content/images/2023/11/carbon--5-.png 1360w" sizes="(min-width: 720px) 720px"></figure><p>Utilizing <code>Map</code> made the process faster and more efficient. The <code>get</code> and <code>set</code> methods of <code>Map</code> provided an easy and quick way to manage our data.</p><h3 id="conclusion">Conclusion</h3><p>This LeetCode challenge was not just about solving a problem but also a lesson in optimizing solutions using JavaScript&apos;s array and map methods. It underscored the importance of considering efficient data structures and operations in coding. A perfect reminder that in coding, the journey towards optimization is as crucial as the solution itself!</p>]]></content:encoded></item><item><title><![CDATA[NFT Viewer]]></title><description><![CDATA[The NFT viewer updates in realtime to show the latest artwork being added to the Solona blockchain. Hover on picture for details.]]></description><link>/nft-viewer/</link><guid isPermaLink="false">63c08b02d258e00001f00258</guid><dc:creator><![CDATA[Ashley Buckingham]]></dc:creator><pubDate>Sun, 22 Jan 2023 22:36:00 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1642525027649-00d7397a6d4a?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDR8fG5mdHxlbnwwfHx8fDE2NzM1NjMzMDg&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<img src="https://images.unsplash.com/photo-1642525027649-00d7397a6d4a?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDR8fG5mdHxlbnwwfHx8fDE2NzM1NjMzMDg&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" alt="NFT Viewer"><p><em>The NFT viewer updates in realtime to show the latest artwork being added to the Solona blockchain. Hover on picture for details.</em></p><!--kg-card-begin: html--><iframe src="https://api.noportfol.io/nft" height="100%" style="height: 830px; width: 100%;"></iframe><!--kg-card-end: html--><p></p><p>It&apos;s 2022, and the world has gone cryptocurrency crazy. Everyone from friends in the pub to colleagues in the boardroom talked about cryptocurrency, blockchain, and various dogs going to the moon.</p><p></p><p>Then came the flood of NFTs. Non-fungible tokens (NFTs) are used to represent digital items such as artwork, music, videos, and other types of digital content. Because each NFT is unique, it can&apos;t be replaced or exchanged for something else, like a traditional digital file can be. This makes them valuable, and they can be bought and sold like other types of assets. When you purchase an NFT, you are buying the rights to that specific digital item and you can prove your ownership via the blockchain.</p><p></p><p>A blockchain is a digital ledger that records transactions across a network of computers. It&apos;s called a &quot;blockchain&quot; because it is made up of blocks of data that are linked together in a chain. Each block contains a record of multiple transactions, and once a block is added to the chain, it cannot be altered. The biggest advantage of using a blockchain is that it is decentralized, meaning that it is not controlled by a single entity, it is open-source and maintained by a network of computers around the world, this makes it more secure and less susceptible to fraud.</p><p></p><p>While the use and success of NFT are highly debatable, I enjoy looking at the unique and beautiful artwork being created and added to the blockchain every second. This is why I created the NFT viewer displayed at the top of the article.</p><hr><h2 id="how-does-it-work-tech-bit">How does it work (Tech Bit)?</h2><p></p><p><strong>Step 1 - Choosing a blockchain</strong><br>NFTs are built on blockchain technology, a digital ledger that records transactions securely and transparently. There are many different blockchains available, but I choose Solana.</p><p>One of the most significant advantages of Solana for NFTs is its fast transaction speeds. Solana can process up to 65,000 transactions per second, which is much faster than other popular blockchain platforms like Ethereum. This means that buying and selling NFTs on Solana can be done quickly and with minimal delays.</p><p><br><strong>Step 2 - Connecting to the blockchain.</strong></p><p>To connect to the blockchain, I used quickNode. This allows me to query the Solana blockchain without hosting a node myself.</p><figure class="kg-card kg-image-card"><img src="/content/images/2023/01/carbon.png" class="kg-image" alt="NFT Viewer" loading="lazy" width="1534" height="476" srcset="/content/images/size/w600/2023/01/carbon.png 600w, /content/images/size/w1000/2023/01/carbon.png 1000w, /content/images/2023/01/carbon.png 1534w" sizes="(min-width: 720px) 720px"></figure><p><strong>Step 3 - Getting the NFT from the blockchain</strong><br></p><p>This part was tricky, and there were a few hoops I had to jump through. The result was an application that followed the steps below:<br></p><p>a. Get the latest block from the blockchain.</p><figure class="kg-card kg-image-card"><img src="/content/images/2023/01/carbon-2.png" class="kg-image" alt="NFT Viewer" loading="lazy" width="1300" height="1224" srcset="/content/images/size/w600/2023/01/carbon-2.png 600w, /content/images/size/w1000/2023/01/carbon-2.png 1000w, /content/images/2023/01/carbon-2.png 1300w" sizes="(min-width: 720px) 720px"></figure><p>b. Loop through all the transactions and filter the ones that have amount=1 (NFTs are unique and therefore show as a maximum of 1)</p><figure class="kg-card kg-image-card"><img src="/content/images/2023/01/carbon-3.png" class="kg-image" alt="NFT Viewer" loading="lazy" width="1316" height="884" srcset="/content/images/size/w600/2023/01/carbon-3.png 600w, /content/images/size/w1000/2023/01/carbon-3.png 1000w, /content/images/2023/01/carbon-3.png 1316w" sizes="(min-width: 720px) 720px"></figure><p>c. Get the mint Public key from the transaction.</p><figure class="kg-card kg-image-card"><img src="/content/images/2023/01/carbon-4.png" class="kg-image" alt="NFT Viewer" loading="lazy" width="1316" height="884" srcset="/content/images/size/w600/2023/01/carbon-4.png 600w, /content/images/size/w1000/2023/01/carbon-4.png 1000w, /content/images/2023/01/carbon-4.png 1316w" sizes="(min-width: 720px) 720px"></figure><p>d. Pass the key to metaplex to get the metadata of the transaction</p><figure class="kg-card kg-image-card"><img src="/content/images/2023/01/carbon-5.png" class="kg-image" alt="NFT Viewer" loading="lazy" width="2000" height="1162" srcset="/content/images/size/w600/2023/01/carbon-5.png 600w, /content/images/size/w1000/2023/01/carbon-5.png 1000w, /content/images/size/w1600/2023/01/carbon-5.png 1600w, /content/images/2023/01/carbon-5.png 2048w" sizes="(min-width: 720px) 720px"></figure><p>e. Fetch the content of the URL found in the metadata. This returns the data required to get the image and information.</p><figure class="kg-card kg-image-card"><img src="/content/images/2023/01/carbon-6.png" class="kg-image" alt="NFT Viewer" loading="lazy" width="2000" height="2523" srcset="/content/images/size/w600/2023/01/carbon-6.png 600w, /content/images/size/w1000/2023/01/carbon-6.png 1000w, /content/images/size/w1600/2023/01/carbon-6.png 1600w, /content/images/2023/01/carbon-6.png 2048w" sizes="(min-width: 720px) 720px"></figure>]]></content:encoded></item><item><title><![CDATA[Why AI will not replace developers]]></title><description><![CDATA[<p>AI has recently been thrown around as a &apos;buzz term&apos;. In the last year, it seemed as if any company with the most basic of &#xA0;logic was plastered with one or more of words &apos;AI&apos;, &apos;Artificial intelligence or &apos;real AI.&apos;</p><p>While the</p>]]></description><link>/chat/</link><guid isPermaLink="false">63a584d33b62b20001eb7741</guid><dc:creator><![CDATA[Ashley Buckingham]]></dc:creator><pubDate>Fri, 23 Dec 2022 11:44:53 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1601132359864-c974e79890ac?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDl8fHJvYm90fGVufDB8fHx8MTY3MTgxMTI1MQ&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<img src="https://images.unsplash.com/photo-1601132359864-c974e79890ac?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDl8fHJvYm90fGVufDB8fHx8MTY3MTgxMTI1MQ&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" alt="Why AI will not replace developers"><p>AI has recently been thrown around as a &apos;buzz term&apos;. In the last year, it seemed as if any company with the most basic of &#xA0;logic was plastered with one or more of words &apos;AI&apos;, &apos;Artificial intelligence or &apos;real AI.&apos;</p><p>While the true definition of AI is up for debate, companies are developing complex deep learning. One such company OpenAI has developed GPT-3. GPT-3, as described by its authors, is an &apos;autoregressive language model that uses deep learning to produce human-like text&apos;.</p><p>In the last few months, we have seen OpenAI use this model as a basis for many products and showcases. For example, you may be familiar with GitHub co-pilot, a code completion suggestion tool if you are a developer. If you are an artist, you may be familiar with regenerative art or other products such as DAL-E, also created by OpenAI, which generates digital images from natural language descriptions.</p><p>On November 30, 2022, OpenAI released its latest beta, ChatGPT. ChatGPT uses a GPT-3 algorithm to create a chatbot that can hold context between prompts and can be used for many things, such as explaining complex theories, &#xA0;writing articles and writing code. It is the latter example that caused me to ask the question, &quot;will AI replace the need for developers&quot;?</p><p>Instead of creating a post outlining and defending the need for developers in a world of AI, why not get ChatGPT to do it for me? The following are the prompts I used to create the post.</p><hr><h2 id="generating-linkedin-post">Generating LinkedIn Post</h2><p></p><p><strong>Write a thought-provoking article about why we still need developers when we have tools like chatGPT. Make it a size that will fit in a LinkedIn post</strong></p><blockquote>Despite the impressive capabilities of tools like chatGPT, which uses artificial intelligence to generate human-like text, there are several reasons why we will still need developers in the tech industry. <br><br>While chatGPT and similar tools can generate coherent text, they are not capable of creative problem-solving or out-of-the-box thinking in the way that human developers are. They also lack the ability to understand the nuances and complexities of human language and are not able to adapt to new technologies and environments. Additionally, developers bring valuable skills and responsibilities such as testing and debugging software, collaborating with team members, and working with customers and clients, which chatGPT and other AI-powered tools are not capable of. In conclusion, developers will continue to be an essential part of the tech industry, even with the existence of chatGPT and similar technologies.</blockquote><p><strong>Make the main arguments into bullet points.</strong></p><blockquote>Despite the impressive capabilities of tools like chatGPT, they are not capable of creative problem-solving or out-of-the-box thinking in the way that human developers are.<br><br>ChatGPT and similar tools are not able to fully grasp the subtleties of language or the context in which certain words and phrases are used.<br><br>ChatGPT and similar tools are not able to learn and adapt to new programming languages, frameworks, and platforms in the same way that human developers can.<br><br>Developers bring valuable skills and responsibilities such as testing and debugging software, collaborating with team members, and working with customers and clients, which chatGPT and other AI-powered tools are not capable of.</blockquote><p><strong>Add a catchy aggressive one-line introduction.</strong></p><blockquote>ChatGPT may be able to generate human-like text, but it can never replace the creativity, adaptability, and human understanding of a developer.</blockquote><hr><p>Perfect... A post was generated in a matter of minutes to defend developers worldwide.</p>]]></content:encoded></item><item><title><![CDATA[OpenWRT: Travel router]]></title><description><![CDATA[<p></p><p>In March 2020, President Donald Trump made an executive order banning tourists from entering the USA.</p><p>After 20 months, in November 2021, President Biden reopened the US, and travel resumed. In May 2022, I finally arrived back in Las Vegas after two years of separation.</p><p>While I loved visiting, I</p>]]></description><link>/openwrt-travel-router/</link><guid isPermaLink="false">6307e6166b77e300015660cc</guid><dc:creator><![CDATA[Ashley Buckingham]]></dc:creator><pubDate>Thu, 25 Aug 2022 21:15:09 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1583474884909-230dac058b63?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDEwfHxyb3V0ZXJ8ZW58MHx8fHwxNjYxNDYyMDk4&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<img src="https://images.unsplash.com/photo-1583474884909-230dac058b63?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDEwfHxyb3V0ZXJ8ZW58MHx8fHwxNjYxNDYyMDk4&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=2000" alt="OpenWRT: Travel router"><p></p><p>In March 2020, President Donald Trump made an executive order banning tourists from entering the USA.</p><p>After 20 months, in November 2021, President Biden reopened the US, and travel resumed. In May 2022, I finally arrived back in Las Vegas after two years of separation.</p><p>While I loved visiting, I was shocked by the tactics some hotels used to scrape back the lost wages from the pandemic&#x2014;an increase in resort fees, lack of drink service and higher table minimums.</p><p>The tactic that affected me the most was limiting devices on the hotel Wi-Fi. I found most hotels would only allow you to connect only one or two devices to Wi-Fi within 24 hours. After that, any additional device would cost 35$ a day!</p><h3 id="openwrt">OpenWRT</h3><p>I will be travelling back in the coming weeks, so I spent some time researching a solution and found OpenWRT. Using OpenWRT, I could create a small travel router that would enable me to:</p><ul><li>Connect multiple devices to one connection, removing device limits</li><li>Use a VPN connection to secure all my internet traffic by default</li><li>Set up the connection between all my devices to the router once, speeding up the connection time between hotels.</li></ul><p>I first decided to look into using a USB WIFI adapter with my Macbook to let me connect my laptop to the Wi-Fi and then share the connection through the external USB Wi-Fi. However, I soon found that support for external Wi-Fi adapters was lacking in the new MacBook pros.</p><p>I soon settled on using a raspberry pi, a small credit card-sized computer. Like the Macbook, the Pi has onboard Wi-Fi that I could use to connect to the hotel; I would then use my USB wireless adapter to connect to my other devices. After watching the helpful tutorial by NETWORKCHUCK, I purchased the RT5370 for &#xA3;7.50.</p><figure class="kg-card kg-image-card"><img src="/content/images/2022/08/516PzeiQ0nL._AC_SL1000_.jpg" class="kg-image" alt="OpenWRT: Travel router" loading="lazy" width="956" height="776" srcset="/content/images/size/w600/2022/08/516PzeiQ0nL._AC_SL1000_.jpg 600w, /content/images/2022/08/516PzeiQ0nL._AC_SL1000_.jpg 956w" sizes="(min-width: 720px) 720px"></figure><p> &#xA0;</p><p>I then downloaded the raspberry pi image from the OpenWRT website <a href="https://openwrt.org/downloads?ref=localhost">https://openwrt.org/downloads</a>, flashed the SD card and inserted it into the Raspberry Pi.</p><p>Next, I connected the pi to the MacBook using an ethernet cable. And ran the following commands</p><!--kg-card-begin: html--><iframe src="https://carbon.now.sh/embed?bg=rgba%28255%2C255%2C255%2C0%29&amp;t=material&amp;wt=none&amp;l=application%2Fx-sh&amp;width=680&amp;ds=true&amp;dsyoff=20px&amp;dsblur=68px&amp;wc=true&amp;wa=true&amp;pv=56px&amp;ph=56px&amp;ln=false&amp;fl=1&amp;fm=Hack&amp;fs=14px&amp;lh=133%25&amp;si=false&amp;es=2x&amp;wm=false&amp;code=%2523%2520ssh%2520to%2520pi%250Assh%2520root%2540192.168.1.1%250A%250A%2523%2520change%2520password%250Aroot%2540OpenWrt%253A%7E%2520passwd%250Alogmein123%250A%250A%2523%2520Edit%2520the%2520network%2520file%250Aroot%2540OpenWrt%253A%7E%2520vi%2520etc%252Fconfig%252Fnetwork%250A%250Aconfig%2520interface%2520%27loopback%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520device%2520%27lo%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520proto%2520%27static%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520ipaddr%2520%27127.0.0.1%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520netmask%2520%27255.0.0.0%27%250A%250Aconfig%2520globals%2520%27globals%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520ula_prefix%2520%27fdb4%253A089f%253A87e6%253A%253A%252F48%27%250A%250Aconfig%2520device%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520name%2520%27br-lan%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520type%2520%27bridge%27%250A%2520%2520%2520%2520%2520%2520%2520%2520list%2520ports%2520%27eth0%27%250A%250Aconfig%2520interface%2520%27lan%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520device%2520%27br-lan%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520proto%2520%27static%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520ipaddr%2520%2710.71.71.1%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520netmask%2520%27255.255.255.0%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520ip6assign%2520%2760%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520force_link%2520%271%27%250A%250Aconfig%2520interface%2520%27wwan%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520proto%2520%27dhcp%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520peerdns%2520%270%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520dns%2520%271.1.1.1%25208.8.8.8%27%250A%250Aconfig%2520interface%2520%27vpnclient%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520ifname%2520%27tun0%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520proto%2520%27none%27%250A%250A%2523%2520update%2520firewall%250A%250Aroot%2540OpenWrt%253A%7E%2520vi%2520etc%252Fconfig%252Ffirewall%250Aconfig%2520zone%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520name%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520wan%250A%2520%2520%2520%2520%2520%2520%2520%2520list%2520%2520%2520network%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%27wan%27%250A%2520%2520%2520%2520%2520%2520%2520%2520list%2520%2520%2520network%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%27wan6%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520input%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520ACCEPT%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520output%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520ACCEPT%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520forward%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520REJECT%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520masq%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%25201%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520mtu_fix%2520%2520%2520%2520%2520%2520%2520%2520%2520%25201%250A%250A%2523%2520reboot%250Aroot%2540OpenWrt%253A%7E%2520reboot%250A%250A%2523%2520setup%2520wireless%250Aroot%2540OpenWrt%253A%7E%2523%2520vi%2520%252Fetc%252Fconfig%252Fwireless%250Aconfig%2520wifi-device%2520%27radio0%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520type%2520%27mac80211%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520path%2520%27platform%252Fsoc%252Ffe300000.mmcnr%252Fmmc_host%252Fmmc1%252Fmmc1%253A0001%252Fmmc1%253A0001%253A1%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520channel%2520%277%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520band%2520%2711g%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520htmode%2520%27VHT20%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520disabled%2520%270%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520short_gi_40%2520%270%27%250A%250Aconfig%2520wifi-iface%2520%27default_radio0%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520device%2520%27radio0%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520network%2520%27lan%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520mode%2520%27ap%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520ssid%2520%27OpenWrt%27%250A%2520%2520%2520%2520%2520%2520%2520%2520option%2520encryption%2520%27none%27%250A%250A%2523%2520commit%2520changes%250Aroot%2540OpenWrt%253A%7E%2520uci%2520commit%2520wireless%250Aroot%2540OpenWrt%253A%7E%2520wifi%250A%250A%2523%2520install%2520driver%250Aopkg%2520update%250A%250Aopkg%2520install%2520kmod-rt2800-lib%2520kmod-rt2800-usb%2520kmod-rt2x00-lib%2520kmod-rt2" style="width: 100%; height: 2508px; border:0; transform: scale(1); overflow:hidden;" sandbox="allow-scripts allow-same-origin">
 </iframe><!--kg-card-end: html--><p>I was able to connect to the new wifi provided by the usb adapter and conduct a speed test.</p><figure class="kg-card kg-image-card"><img src="/content/images/2022/08/IMG_7488.PNG" class="kg-image" alt="OpenWRT: Travel router" loading="lazy" width="1170" height="2532" srcset="/content/images/size/w600/2022/08/IMG_7488.PNG 600w, /content/images/size/w1000/2022/08/IMG_7488.PNG 1000w, /content/images/2022/08/IMG_7488.PNG 1170w" sizes="(min-width: 720px) 720px"></figure><figure class="kg-card kg-image-card"><img src="/content/images/2022/08/IMG_7489.PNG" class="kg-image" alt="OpenWRT: Travel router" loading="lazy" width="1170" height="2532" srcset="/content/images/size/w600/2022/08/IMG_7489.PNG 600w, /content/images/size/w1000/2022/08/IMG_7489.PNG 1000w, /content/images/2022/08/IMG_7489.PNG 1170w" sizes="(min-width: 720px) 720px"></figure><p>While the internet speeds are not terrible, I found the solution unreliable, and I often had to reconnect the Pi to the laptop to troubleshoot issues.<br>This unreliability is not ideal when on holiday and trying to relax. I will seek an alternative solution in the coming days.</p>]]></content:encoded></item><item><title><![CDATA[Echo: Twitter Audience Analysis]]></title><description><![CDATA[Is there anybody out there? Find the ideal time to tweet!]]></description><link>/echo-tweet-audience-analysis/</link><guid isPermaLink="false">62fad8c602ddd8000141f0ca</guid><category><![CDATA[node.js]]></category><dc:creator><![CDATA[Ashley Buckingham]]></dc:creator><pubDate>Mon, 15 Aug 2022 23:38:44 GMT</pubDate><media:content url="/content/images/2022/08/pexels-pixabay-267389.jpg" medium="image"/><content:encoded><![CDATA[<h3 id="is-there-anybody-out-there">Is there anybody out there?</h3><img src="/content/images/2022/08/pexels-pixabay-267389.jpg" alt="Echo: Twitter Audience Analysis"><p>It&#x2019;s a slow Friday. You finish in 30 minutes and can almost taste the cold pint waiting for you at the local. You have already agreed to go out for after-work drinks, and now begins the chess-like game of which coworker will suggest we leave first.<br></p><p>You still have to reply to that client that keeps chasing you, and you could do a few bits to get a head start on Monday, but that&#x2019;s a &#x201C;Monday you&#x201D; problem. &#x201C;Friday you&#x201D; has no care for &#x201C;Monday you&#x201D;. &#x201C;Friday you&#x201D; would push &#x201C;Monday you&#x201D; in front of a bus if it meant you got to the bar quicker.<br></p><p>You decide to fill your time with some social media. So you write the perfect tweet, a perfect balance of wit and humour, hit send, and head to the pub.</p><p>On Saturday, you wake up and check your Twitter. 0 likes, 0 retweets.</p><p>Why?</p><p>Just like slipping out to the pub on a Friday, timing is everything; it&#x2019;s simple. You have tweeted at the wrong time for your followers; they are not scrolling while you are tweeting.<br></p><h3 id="but-how-do-you-know-when-your-users-are-online-when-is-the-best-time-to-tweet">But how do you know when your users are online? When is the best time to tweet?</h3><p></p><p>We can identify when the users are online in four easy steps:</p><ol><li>Get a list of your followers</li><li>Get a list of people you are following.</li><li>When they tweet (when they are online).</li><li>Create a visualisation that shows when to post</li></ol><p></p><!--kg-card-begin: html--><iframe src="https://api.noportfol.io/twitter" width="100%" height="100%" style="height: 450px; border: none;"></iframe><!--kg-card-end: html--><p>Even with the multiple timezones of my user base, you can identify some spikes in the week where my users are most active. Posting at these times ensures that I am posting at the times when my users are using the platform.</p>]]></content:encoded></item><item><title><![CDATA[iFound - Building an Apple store scraper]]></title><description><![CDATA[Find apple stock instantly.]]></description><link>/ifound-building-an-apple-store-scraper/</link><guid isPermaLink="false">62fa7c3e105333000136218b</guid><category><![CDATA[node.js]]></category><dc:creator><![CDATA[Ashley Buckingham]]></dc:creator><pubDate>Mon, 15 Aug 2022 17:15:06 GMT</pubDate><media:content url="/content/images/2022/08/pexels-pixabay-279166.jpg" medium="image"/><content:encoded><![CDATA[<img src="/content/images/2022/08/pexels-pixabay-279166.jpg" alt="iFound - Building an Apple store scraper"><p>It&apos;s a Tuesday in September, and you have just finished watching the latest Apple keynote. You are amazed at the products Apple has created, and you reach for your wallet only to find that the site has sold out.</p><p>Several colleagues and I had this problem in the release week of the iPhone 12. Logging in every day to check stock soon became part of our routine. At one point, slack rooms were created to notify people when stock appeared.</p><p>With hours spent refreshing browsers, checking and rechecking, I created &quot;iFound&quot;. &quot;iFound&quot;, a small project that sends a request to the Apple servers to get real-time stock levels of products.</p><h3 id="demo">DEMO</h3><p>The demo below shows how I can check stock without going through the website steps. Entering a part ID and a postcode will check real-time inventory in your local stores. A simple notification system can be added to the code to alert users when a particular store is in stock.</p><!--kg-card-begin: html--><iframe width="100%" height="100%" src="https://api.noportfol.io/ifound"></iframe><!--kg-card-end: html--><h3 id="explanation">Explanation</h3><p>The code for this project is simple. The process for understanding the request is even easier. To understand what type of request i could make i went to apple.com selected a product and clicked &apos;pickup&apos;, I was presented with the following screen.</p><figure class="kg-card kg-image-card kg-width-wide"><img src="/content/images/2022/08/Screenshot-2022-08-15-at-18.11.52.png" class="kg-image" alt="iFound - Building an Apple store scraper" loading="lazy" width="1255" height="1053" srcset="/content/images/size/w600/2022/08/Screenshot-2022-08-15-at-18.11.52.png 600w, /content/images/size/w1000/2022/08/Screenshot-2022-08-15-at-18.11.52.png 1000w, /content/images/2022/08/Screenshot-2022-08-15-at-18.11.52.png 1255w" sizes="(min-width: 1200px) 1200px"></figure><p></p><p>Searching with a postcode sends a request to Apple&apos;s servers to return the stock levels of the given product.<br>Using the web browser&apos;s developer tools, you can monitor the network traffic as you click the search button.</p><figure class="kg-card kg-image-card kg-width-wide"><img src="/content/images/2022/08/Screenshot-2022-08-15-at-18.14.27.png" class="kg-image" alt="iFound - Building an Apple store scraper" loading="lazy" width="1351" height="717" srcset="/content/images/size/w600/2022/08/Screenshot-2022-08-15-at-18.14.27.png 600w, /content/images/size/w1000/2022/08/Screenshot-2022-08-15-at-18.14.27.png 1000w, /content/images/2022/08/Screenshot-2022-08-15-at-18.14.27.png 1351w" sizes="(min-width: 1200px) 1200px"></figure><p>Here we can see a GET request to apple.com with a few parameters. Using what we know about Apple, reconstructing this URL is very easy.</p><p>https://www.apple.com/uk/shop/fulfillment-messages?searchNearby=true&amp;parts.0=MLY43B/A&amp;location=se1%201aa</p><p>becomes</p><p>https://www.apple.com/uk/shop/fulfillment-messages?searchNearby=true&amp;parts.0=&lt;part_number&gt;&amp;location=&lt;post_code</p><p>Now let&apos;s look at the response to the request(below).<br>The server returns many fields; I have removed many of those to increase readability. The interesting parts of the JSON are &quot;storeName&quot;, &quot;partsAvailability&quot;, and &quot;storePickEligible&quot;. These fields show which stores have stock.</p><figure class="kg-card kg-image-card kg-width-wide"><img src="/content/images/2022/08/carbon-3.png" class="kg-image" alt="iFound - Building an Apple store scraper" loading="lazy" width="1024" height="1617" srcset="/content/images/size/w600/2022/08/carbon-3.png 600w, /content/images/size/w1000/2022/08/carbon-3.png 1000w, /content/images/2022/08/carbon-3.png 1024w"></figure><p>Using the information we know about the request, we can create a simple node.js script to get this data. Then, a developer can edit the code to add a notification system that will fire when product stock appears; we have successfully used Slack to buy many products.</p><p></p><!--kg-card-begin: html--><iframe src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&amp;t=material&amp;wt=none&amp;l=javascript&amp;width=680&amp;ds=true&amp;dsyoff=20px&amp;dsblur=68px&amp;wc=true&amp;wa=true&amp;pv=48px&amp;ph=32px&amp;ln=false&amp;fl=1&amp;fm=Hack&amp;fs=13px&amp;lh=133%25&amp;si=false&amp;es=1x&amp;wm=false&amp;code=const%2520fetch%2520%253D%2520%28...args%29%2520%253D%253E%2520import%28%27node-fetch%27%29.then%28%28%257Bdefault%253A%2520fetch%257D%29%2520%253D%253E%2520fetch%28...args%29%29%253B%250A%250Aconst%2520postcode%2520%253D%2520%2560se1%2525201aa%2560%253B%250Aconst%2520part%2520%253D%2520%2560MLY43B%252FA%2560%253B%250A%250AcheckStock%28postcode%252C%2520part%29%253B%250A%250Aasync%2520function%2520checkStock%28postcode%252C%2520part%29%2520%257B%250A%2520%2520%2520%2520%252F%252F%2520do%2520request%2520to%2520apple%250A%2520%2520%2520%2520const%2520url%2520%253D%2520%2560https%253A%252F%252Fwww.apple.com%252Fuk%252Fshop%252Ffulfillment-messages%253FsearchNearby%253Dtrue%2526parts.0%253D%2524%257Bpart%257D%2526location%253D%2524%257Bpostcode%257D%2560%253B%250A%2520%2520%2520%2520const%2520req%2520%253D%2520await%2520fetch%28url%29%253B%250A%2520%2520%2520%2520const%2520resultJson%2520%253D%2520await%2520req.json%28%29%253B%250A%250A%2520%2520%2520%2520%252F%252F%2520get%2520all%2520available%2520stores%2520that%2520have%2520pickupDisplay%250A%2520%2520%2520%2520const%2520availableStores%2520%253D%2520resultJson.body.content.pickupMessage.stores.filter%28store%2520%253D%253E%2520store.partsAvailability%255Bpart%255D.pickupDisplay%2520%21%253D%2520%27unavailable%27%29%253B%250A%250A%2520%2520%2520%2520%252F%252F%2520get%2520the%2520store%2520names%2520with%2520stock%250A%2520%2520%2520%2520const%2520storeNames%2520%253D%2520availableStores.map%28store%2520%253D%253E%2520store.storeName%29%253B%250A%250A%2520%2520%2520%2520%252F%252F%2520print%2520result%250A%2520%2520%2520%2520if%2520%28storeNames.length%2520%253E%25200%29%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520console.log%28%2560%2524%257Bpart%257D%2520is%2520available%2520at%2520%2524%257BstoreNames.join%28%27%252C%2520%27%29%257D%2560%29%253B%250A%2520%2520%2520%2520%257D%2520else%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520console.log%28%2560%2524%257Bpart%257D%2520is%2520unavailable%2560%29%253B%250A%2520%2520%2520%2520%257D%250A%257D" style="width: 1024px; height: 668px; border:0; transform: scale(1); overflow:hidden;" sandbox="allow-scripts allow-same-origin">
 </iframe><!--kg-card-end: html--><p>When run, the script outputs the following:<br>MLY43B/A is available at Covent Garden, Regent Street, Brompton Road, Stratford City, White City, Brent Cross, Bromley, Bentall Centre, Bluewater, Lakeside, Watford, The Oracle</p><p>Happy locating!</p>]]></content:encoded></item><item><title><![CDATA[Ghost + Docker - The creation of this blog]]></title><description><![CDATA[RIP WordPress... Long live Ghost?]]></description><link>/ghost-docker-the-creation-of-this-blog/</link><guid isPermaLink="false">62f1aa698298f5000133e47e</guid><category><![CDATA[ghost]]></category><category><![CDATA[docker]]></category><dc:creator><![CDATA[Ashley Buckingham]]></dc:creator><pubDate>Tue, 09 Aug 2022 00:29:37 GMT</pubDate><media:content url="/content/images/2022/08/ghost.png" medium="image"/><content:encoded><![CDATA[<img src="/content/images/2022/08/ghost.png" alt="Ghost + Docker - The creation of this blog"><p><br>While crafting this awesome website, I aimed to find a solution that blended the simplicity of WordPress with the power to customize features as I pleased. As a Javascript developer, I explored various options and stumbled upon the captivating world of <a href="https://ghost.org/?ref=localhost">Ghost</a>. </p><blockquote><strong>Ghost is a powerful app for new-media creators to publish, share, and grow a business around their content. It comes with modern tools to build a website, publish content, send newsletters &amp; offer paid subscriptions to members.</strong></blockquote><p>It is a super simple service to get running, with plenty of themes to download. In addition, because it&apos;s written using Javascript and handlebars under the hood, it is easy to extend or modify the functionality.</p><p>Ghost comes out of the box with everything you need to create a blog site, complete with a simple WYSIWYG editor, paywalled articles, and marketing emails. A growing community also builds additional plugins that allow easy integration of analytics, comments, and live chat.</p><h3 id="setup-with-docker">Setup with Docker</h3><p></p><p>Setup with Docker is super simple. A single docker-compose YAML is enough to create both a database and a live running instance of Ghost. You will want to change these configurations for a production deployment, but the following file will allow you to test the CRM in seconds.</p><!--kg-card-begin: html--><iframe src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&amp;t=material&amp;wt=none&amp;l=yaml&amp;width=680&amp;ds=true&amp;dsyoff=20px&amp;dsblur=68px&amp;wc=true&amp;wa=true&amp;pv=48px&amp;ph=32px&amp;ln=true&amp;fl=1&amp;fm=Hack&amp;fs=13px&amp;lh=133%25&amp;si=false&amp;es=2x&amp;wm=false&amp;code=%2523%2520docker-compose.yaml%250Aversion%253A%2520%273.1%27%250Aservices%253A%250A%2520%2520ghost%253A%250A%2520%2520%2520%2520image%253A%2520ghost%253A5.7.0-alpine%250A%2520%2520%2520%2520restart%253A%2520always%250A%2520%2520%2520%2520ports%253A%250A%2520%2520%2520%2520%2520%2520-%25208080%253A2368%250A%2520%2520%2520%2520environment%253A%250A%2520%2520%2520%2520%2520%2520%2523%2520see%2520https%253A%252F%252Fghost.org%252Fdocs%252Fconfig%252F%2523configuration-options%250A%2520%2520%2520%2520%2520%2520database__client%253A%2520mysql%250A%2520%2520%2520%2520%2520%2520database__connection__host%253A%2520db%250A%2520%2520%2520%2520%2520%2520database__connection__user%253A%2520ghost%250A%2520%2520%2520%2520%2520%2520database__connection__password%253A%2520example%250A%2520%2520%2520%2520%2520%2520database__connection__database%253A%2520ghost%250A%2520%2520%2520%2520%2520%2520url%253A%2520http%253A%252F%252Flocalhost%253A8080%250A%2520%2520%2520%2520volumes%253A%250A%2520%2520%2520%2520%2520%2520-%2520.%252Fcontent%253A%252Fvar%252Flib%252Fghost%252Fcontent%250A%250A%2520%2520db%253A%250A%2520%2520%2520%2520image%253A%2520mysql%253A8.0%250A%2520%2520%2520%2520restart%253A%2520always%250A%2520%2520%2520%2520environment%253A%250A%2520%2520%2520%2520%2520%2520MYSQL_ROOT_PASSWORD%253A%2520example%250A%2520%2520%2520%2520%2520%2520MYSQL_DATABASE%253A%2520ghost%250A%2520%2520%2520%2520%2520%2520MYSQL_USER%253A%2520ghost%250A%2520%2520%2520%2520%2520%2520MYSQL_PASSWORD%253A%2520example%250A%2520%2520%2520%2520volumes%253A%250A%2520%2520%2520%2520%2520%2520-%2520.%252Fdb%253A%252Fvar%252Flib%252Fmysql" style="width: 632px; height: 663px; border:0; transform: scale(1); overflow:hidden;" sandbox="allow-scripts allow-same-origin">
 </iframe><!--kg-card-end: html--><!--kg-card-begin: html--><iframe src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&amp;t=material&amp;wt=none&amp;l=application%2Fx-sh&amp;width=680&amp;ds=true&amp;dsyoff=20px&amp;dsblur=68px&amp;wc=true&amp;wa=false&amp;pv=48px&amp;ph=32px&amp;ln=false&amp;fl=1&amp;fm=Hack&amp;fs=13px&amp;lh=133%25&amp;si=false&amp;es=2x&amp;wm=false&amp;code=%2524%2520docker-compose%2520up%250A%2523%2520App%2520Availble%2520at%2520http%253A%252F%252Flocalhost%253A8080%252Fghost" style="width: 680px; height: 204px; border:0; transform: scale(1); overflow:hidden;" sandbox="allow-scripts allow-same-origin">

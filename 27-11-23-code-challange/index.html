@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>27/11/23 - Code Challenge</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preload" href="/assets/css/app.css?v=cdb99f323f" as="style" />
+    <link rel="preload" href="/assets/js/manifest.js?v=cdb99f323f" as="script" />
+    <link rel="preload" href="/assets/js/vendor/content-api.min.js?v=cdb99f323f" as="script" />
+    <link rel="preload" href="/assets/js/vendor.js?v=cdb99f323f" as="script" />
+    <link rel="preload" href="/assets/js/app.js?v=cdb99f323f" as="script" />
+
+      <link rel="preload" href="/assets/css/post.css?v=cdb99f323f" as="style" />
+  <link rel="preload" href="/assets/js/post.js?v=cdb99f323f" as="script" />
+
+
+    <style>
+      /* These font-faces are here to make fonts work if the Ghost instance is installed in a subdirectory */
+
+      /* source-sans-pro-regular */
+      @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: local('SourceSansPro-Regular'),
+            url("/assets/fonts/source-sans-pro/latin/source-sans-pro-regular.woff2?v=cdb99f323f") format('woff2'),
+            url("/assets/fonts/source-sans-pro/latin/source-sans-pro-regular.woff?v=cdb99f323f") format('woff');
+      }
+
+      /* source-sans-pro-600 */
+      @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: local('SourceSansPro-SemiBold'),
+            url("/assets/fonts/source-sans-pro/latin/source-sans-pro-600.woff2?v=cdb99f323f") format('woff2'),
+            url("/assets/fonts/source-sans-pro/latin/source-sans-pro-600.woff?v=cdb99f323f") format('woff');
+      }
+
+      /* source-sans-pro-700 */
+      @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: local('SourceSansPro-Bold'),
+            url("/assets/fonts/source-sans-pro/latin/source-sans-pro-700.woff2?v=cdb99f323f") format('woff2'),
+            url("/assets/fonts/source-sans-pro/latin/source-sans-pro-700.woff?v=cdb99f323f") format('woff');
+      }
+
+      /* iconmoon */
+      @font-face {
+        font-family: 'icomoon';
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+        src: url("/assets/fonts/icomoon/icomoon.eot?101fc3?v=cdb99f323f");
+        src: url("/assets/fonts/icomoon/icomoon.eot?101fc3?v=cdb99f323f#iefix") format('embedded-opentype'),
+        url("/assets/fonts/icomoon/icomoon.ttf?101fc3?v=cdb99f323f") format('truetype'),
+        url("/assets/fonts/icomoon/icomoon.woff?101fc3?v=cdb99f323f") format('woff'),
+        url("/assets/fonts/icomoon/icomoon.svg?101fc3?v=cdb99f323f#icomoon") format('svg');
+      }
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="/assets/css/app.css?v=cdb99f323f" media="screen" />
+
+      <link rel="stylesheet" type="text/css" href="/assets/css/post.css?v=cdb99f323f" media="screen" />
+
+
+    
+
+    <link rel="canonical" href="/27-11-23-code-challange/">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+    <meta property="og:site_name" content="Ashley Buckingham - Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="27/11/23 - Code Challenge">
+    <meta property="og:description" content="👨‍💻2722. Join Two Arrays by ID
+
+
+Introduction
+
+Hello, coding enthusiasts! We&#x27;re about to embark on an interesting LeetCode challenge today: Join Two Arrays by ID (Challenge 2722). This task might appear simple at first, but it&#x27;s an excellent platform to delve into some of the more subtle aspects of JavaScript">
+    <meta property="og:url" content="/27-11-23-code-challange/">
+    <meta property="og:image" content="/content/images/2023/11/DALL-E-2023-11-27-21.46.08---A-futuristic-hologram-of-a-calendar-icon--set-against-a-black-background.-The-calendar-icon-should-appear-to-be-floating-in-the-air--with-a-holographi.png">
+    <meta property="article:published_time" content="2023-11-27T19:03:40.000Z">
+    <meta property="article:modified_time" content="2023-11-28T09:47:23.000Z">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="27/11/23 - Code Challenge">
+    <meta name="twitter:description" content="👨‍💻2722. Join Two Arrays by ID
+
+
+Introduction
+
+Hello, coding enthusiasts! We&#x27;re about to embark on an interesting LeetCode challenge today: Join Two Arrays by ID (Challenge 2722). This task might appear simple at first, but it&#x27;s an excellent platform to delve into some of the more subtle aspects of JavaScript">
+    <meta name="twitter:url" content="/27-11-23-code-challange/">
+    <meta name="twitter:image" content="/content/images/2023/11/DALL-E-2023-11-27-21.46.08---A-futuristic-hologram-of-a-calendar-icon--set-against-a-black-background.-The-calendar-icon-should-appear-to-be-floating-in-the-air--with-a-holographi.png">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Ashley Buckingham">
+    <meta name="twitter:creator" content="@cur50r_">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="1024">
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Ashley Buckingham - Blog",
+        "url": "/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "/favicon.ico",
+            "width": 48,
+            "height": 48
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Ashley Buckingham",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/content/images/2023/01/T016PALP94Y-U01DN9PGZ6W-e92dcddddf2a-512.jpeg",
+            "width": 512,
+            "height": 512
+        },
+        "url": "/author/ashley/",
+        "sameAs": [
+            "https://uk.linkedin.com/in/ashleybuckingham",
+            "https://twitter.com/cur50r_"
+        ]
+    },
+    "headline": "27/11/23 - Code Challenge",
+    "url": "/27-11-23-code-challange/",
+    "datePublished": "2023-11-27T19:03:40.000Z",
+    "dateModified": "2023-11-28T09:47:23.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "/content/images/2023/11/DALL-E-2023-11-27-21.46.08---A-futuristic-hologram-of-a-calendar-icon--set-against-a-black-background.-The-calendar-icon-should-appear-to-be-floating-in-the-air--with-a-holographi.png",
+        "width": 1024,
+        "height": 1024
+    },
+    "description": "👨‍💻2722. Join Two Arrays by ID\n\n\nIntroduction\n\nHello, coding enthusiasts! We&#x27;re about to embark on an interesting LeetCode challenge today: Join Two Arrays by ID (Challenge 2722). This task might appear simple at first, but it&#x27;s an excellent platform to delve into some of the more subtle aspects of JavaScript and discover some nifty optimization strategies. Let&#x27;s take a journey through my coding process and insights!\n\n\nThe Problem\n\nOur task involves two arrays, arr1 and arr2, each containing o",
+    "mainEntityOfPage": "/27-11-23-code-challange/"
+}
+    </script>
+
+    <meta name="generator" content="Ghost 5.74">
+    <link rel="alternate" type="application/rss+xml" title="Ashley Buckingham - Blog" href="/rss/">
+    
+    <script defer src="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/sodo-search.min.js" data-key="64f7a9d7053e23a890539bf696" data-styles="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/main.css" data-sodo-search="/" crossorigin="anonymous"></script>
+    
+    <link href="/webmentions/receive/" rel="webmention">
+    <script defer src="/public/cards.min.js?v=cdb99f323f"></script><style>:root {--ghost-accent-color: #ff40ff;}</style>
+    <link rel="stylesheet" type="text/css" href="/public/cards.min.css?v=cdb99f323f">
+
+    <style>
+      :root {
+        --primary-subtle-color: var(--ghost-accent-color) !important;
+      }
+    </style>
+
+    <script>
+      // @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&dn=expat.txt Expat
+      const ghostHost = ""
+      // @license-end
+    </script>
+
+  </head>
+  <body class="post-template">
+    
+
+
+
+  
+<header class="m-header with-picture js-header">
+  <div class="m-mobile-topbar" data-aos="fade-down">
+    <button class="m-icon-button in-mobile-topbar js-open-menu" aria-label="Open menu">
+      <span class="icon-menu" aria-hidden="true"></span>
+    </button>
+      <a href="" class="m-site-name in-mobile-topbar">
+        Ashley Buckingham - Blog
+      </a>
+    <button class="m-icon-button in-mobile-topbar js-open-search" aria-label="Open search">
+      <span class="icon-search" aria-hidden="true"></span>
+    </button>
+  </div>
+
+  <div class="m-menu js-menu">
+    <button class="m-icon-button outlined as-close-menu js-close-menu" aria-label="Close menu">
+      <span class="icon-close"></span>
+    </button>
+    <div class="m-menu__main" data-aos="fade-down">
+      <div class="l-wrapper">
+        <div class="m-nav js-main-nav">
+          <nav class="m-nav__left js-main-nav-left" role="navigation" aria-label="Main menu">
+            <ul>
+                <li class="only-desktop">
+                  <a href="/" class="m-site-name in-desktop-menu">
+                    Ashley Buckingham - Blog
+                  </a>
+                </li>
+                
+    <li class="nav-about">
+      <a href="/about/">About</a>
+    </li>
+
+              <li class="submenu-option js-submenu-option">
+                <button class="m-icon-button in-menu-main more js-toggle-submenu" aria-label="Open submenu">
+                  <span class="icon-more" aria-hidden="true"></span>
+                </button>
+                <div class="m-submenu js-submenu">
+                  <div class="l-wrapper in-submenu">
+                    <section class="m-recent-articles">
+                      <h3 class="m-submenu-title in-recent-articles">Recent articles</h3>
+                          <div class="swiper js-recent-slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                  <a href="/28-11-23/" class="m-recent-article">
+                                    <div class="m-recent-article__picture ">
+                                        <img src="/content/images/size/w300/2023/11/IMG_0386.jpg" loading="lazy" alt="">
+                                    </div>
+                                    <h3 class="m-recent-article__title js-recent-article-title" title="28/11/23 Photo Challenge">
+                                      28/11/23 Photo Challenge
+                                    </h3>
+                                    <span class="m-recent-article__date">12 minutes ago</span>
+                                  </a>
+                                </div>
+                                <div class="swiper-slide">
+                                  <a href="/27-11-23-code-challange/" class="m-recent-article">
+                                    <div class="m-recent-article__picture ">
+                                        <img src="/content/images/size/w300/2023/11/DALL-E-2023-11-27-21.46.08---A-futuristic-hologram-of-a-calendar-icon--set-against-a-black-background.-The-calendar-icon-should-appear-to-be-floating-in-the-air--with-a-holographi.png" loading="lazy" alt="">
+                                    </div>
+                                    <h3 class="m-recent-article__title js-recent-article-title" title="27/11/23 - Code Challenge">
+                                      27/11/23 - Code Challenge
+                                    </h3>
+                                    <span class="m-recent-article__date">16 hours ago</span>
+                                  </a>
+                                </div>
+                                <div class="swiper-slide">
+                                  <a href="/nft-viewer/" class="m-recent-article">
+                                    <div class="m-recent-article__picture ">
+                                        <img src="https://images.unsplash.com/photo-1642525027649-00d7397a6d4a?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDR8fG5mdHxlbnwwfHx8fDE2NzM1NjMzMDg&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;300" loading="lazy" alt="">
+                                    </div>
+                                    <h3 class="m-recent-article__title js-recent-article-title" title="NFT Viewer">
+                                      NFT Viewer
+                                    </h3>
+                                    <span class="m-recent-article__date">10 months ago</span>
+                                  </a>
+                                </div>
+                                <div class="swiper-slide">
+                                  <a href="/chat/" class="m-recent-article">
+                                    <div class="m-recent-article__picture ">
+                                        <img src="https://images.unsplash.com/photo-1601132359864-c974e79890ac?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDl8fHJvYm90fGVufDB8fHx8MTY3MTgxMTI1MQ&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;300" loading="lazy" alt="">
+                                    </div>
+                                    <h3 class="m-recent-article__title js-recent-article-title" title="Why AI will not replace developers">
+                                      Why AI will not replace developers
+                                    </h3>
+                                    <span class="m-recent-article__date">a year ago</span>
+                                  </a>
+                                </div>
+                            </div>
+                          </div>
+                    </section>
+                    <section class="m-tags">
+                      <h3 class="m-submenu-title">Tags</h3>
+                        <ul>
+                            <li>
+                              <a href="/tag/docker/">docker</a>
+                            </li>
+                            <li>
+                              <a href="/tag/ghost-tag/">ghost</a>
+                            </li>
+                            <li>
+                              <a href="/tag/news/">News</a>
+                            </li>
+                            <li>
+                              <a href="/tag/node-js/">node.js</a>
+                            </li>
+                        </ul>
+                    </section>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <div class="m-nav__right">
+            <button class="m-icon-button in-menu-main js-open-search" aria-label="Open search">
+              <span class="icon-search" aria-hidden="true"></span>
+            </button>
+            <div class="m-toggle-darkmode js-tooltip" data-tippy-content="Toggle light/dark mode" tabindex="0">
+              <label for="toggle-darkmode" class="sr-only">
+                Toggle light/dark mode
+              </label>
+              <input id="toggle-darkmode" type="checkbox" class="js-toggle-darkmode">
+              <div>
+                <span class="icon-moon moon" aria-hidden="true"></span>
+                <span class="icon-sunny sun" aria-hidden="true"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+
+<main class="main-wrap">
+    
+  <section class="m-hero with-picture" data-aos="fade">
+    <div class="m-hero__picture in-post">
+      <img
+        srcset="
+          /content/images/size/w300/2023/11/DALL-E-2023-11-27-21.46.08---A-futuristic-hologram-of-a-calendar-icon--set-against-a-black-background.-The-calendar-icon-should-appear-to-be-floating-in-the-air--with-a-holographi.png 300w,
+          /content/images/size/w600/2023/11/DALL-E-2023-11-27-21.46.08---A-futuristic-hologram-of-a-calendar-icon--set-against-a-black-background.-The-calendar-icon-should-appear-to-be-floating-in-the-air--with-a-holographi.png 600w,
+          /content/images/size/w1000/2023/11/DALL-E-2023-11-27-21.46.08---A-futuristic-hologram-of-a-calendar-icon--set-against-a-black-background.-The-calendar-icon-should-appear-to-be-floating-in-the-air--with-a-holographi.png 1000w,
+          /content/images/size/w2000/2023/11/DALL-E-2023-11-27-21.46.08---A-futuristic-hologram-of-a-calendar-icon--set-against-a-black-background.-The-calendar-icon-should-appear-to-be-floating-in-the-air--with-a-holographi.png 2000w
+        "
+        sizes="(max-width: 600px) 600px, (max-width: 1000px) 1000px, 2000px"
+        src="/content/images/size/w1000/2023/11/DALL-E-2023-11-27-21.46.08---A-futuristic-hologram-of-a-calendar-icon--set-against-a-black-background.-The-calendar-icon-should-appear-to-be-floating-in-the-air--with-a-holographi.png"
+        alt=""
+      />
+    </div>
+    </section>
+
+  <article>
+    <div class="l-content in-post">
+        <div class="l-wrapper in-post  js-aos-wrapper" data-aos="fade-up"
+          data-aos-delay="300">
+          <div
+            class="l-post-content js-progress-content">
+            <header class="m-heading">
+              <h1 class="m-heading__title in-post">27/11/23 - Code Challenge</h1>
+              <div class="m-heading__meta">
+                <span class="m-heading__meta__time">Nov 27, 2023</span>
+              </div>
+            </header>
+            <div class="pos-relative js-post-content">
+              <div class="m-share">
+                <div class="m-share__content js-sticky">
+                  <a href="https://www.facebook.com/sharer/sharer.php?u=/27-11-23-code-challange/"
+                    class="m-icon-button filled in-share" target="_blank" rel="noopener" aria-label="Facebook">
+                    <span class="icon-facebook" aria-hidden="true"></span>
+                  </a>
+                  <a href="https://twitter.com/intent/tweet?text=27%2F11%2F23%20-%20Code%20Challenge&url=/27-11-23-code-challange/"
+                    class="m-icon-button filled in-share" target="_blank" rel="noopener" aria-label="Twitter">
+                    <span class="icon-twitter" aria-hidden="true"></span>
+                  </a>
+                  <button class="m-icon-button filled in-share progress js-scrolltop" aria-label="Scroll to top">
+                    <span class="icon-arrow-top" aria-hidden="true"></span>
+                    <svg aria-hidden="true">
+                      <circle class="progress-ring__circle js-progress" fill="transparent" r="0" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="kg-card kg-callout-card kg-callout-card-blue"><div class="kg-callout-emoji">👨‍💻</div><div class="kg-callout-text"><a href="https://leetcode.com/problems/join-two-arrays-by-id/?ref=localhost">2722. Join Two Arrays by ID</a></div></div><hr><h3 id="introduction">Introduction</h3><p>Hello, coding enthusiasts! We're about to embark on an interesting LeetCode challenge today: <em>Join Two Arrays by ID (Challenge 2722)</em>. This task might appear simple at first, but it's an excellent platform to delve into some of the more subtle aspects of JavaScript and discover some nifty optimization strategies. Let's take a journey through my coding process and insights!</p><h3 id="the-problem">The Problem</h3><p>Our task involves two arrays, <code>arr1</code> and <code>arr2</code>, each containing objects with an <code>id</code> field. We aim to merge them into a single array, <code>joinedArray</code>, following these guidelines:</p><ul><li>Merge objects using their <code>id</code> as the key.</li><li>If an <code>id</code> is found in both arrays, blend their properties, with <code>arr2</code> taking precedence over <code>arr1</code>.</li><li>Finally, sort <code>joinedArray</code> in ascending order based on the <code>id</code>.</li></ul><h3 id="initial-idea">Initial Idea</h3><p>To tackle this, I started by conceptualizing the function's structure. My plan was to iterate through <code>arr2</code>, check for the presence of each element in <code>arr1</code>, and perform one of two actions:</p><ul><li>If an element from <code>arr2</code> didn't exist in <code>arr1</code>, I'd simply add it to <code>joinedArray</code>.</li><li>If it did exist, I'd merge their properties, ensuring <code>arr2</code>'s values override those from <code>arr1</code>.</li><li>The last step would be sorting <code>joinedArray</code> based on <code>id</code>.</li></ul><h3 id="locating-elements">Locating Elements</h3><p>Initially, I leaned towards using lodash but decided to stick to native JavaScript functions for a cleaner approach. I used <code>forEach</code> to traverse through <code>arr2</code> and utilized the <code>.find</code> method to check if an element already exists in <code>arr1</code>.</p><figure class="kg-card kg-image-card"><img src="/content/images/2023/11/carbon--1--1.png" class="kg-image" alt loading="lazy" width="1664" height="328" srcset="/content/images/size/w600/2023/11/carbon--1--1.png 600w, /content/images/size/w1000/2023/11/carbon--1--1.png 1000w, /content/images/size/w1600/2023/11/carbon--1--1.png 1600w, /content/images/2023/11/carbon--1--1.png 1664w" sizes="(min-width: 720px) 720px"></figure><p>However, I realized I needed to know the specific index of the found element in <code>joinedArray</code>. Therefore, I replaced <code>.find</code> with <code>.findIndex</code>.</p><h3 id="upserting-values">Upserting Values</h3><p>The next step was to either add the new object to <code>joinedArray</code> or update the existing one. Adding was straightforward with <code>.push</code>. To update, I used the spread operator, ensuring a selective overwrite of properties:</p><figure class="kg-card kg-image-card"><img src="/content/images/2023/11/carbon--3-.png" class="kg-image" alt loading="lazy" width="1360" height="328" srcset="/content/images/size/w600/2023/11/carbon--3-.png 600w, /content/images/size/w1000/2023/11/carbon--3-.png 1000w, /content/images/2023/11/carbon--3-.png 1360w" sizes="(min-width: 720px) 720px"></figure><h3 id="sorting-the-array">Sorting the Array</h3><p>Sorting <code>joinedArray</code> was a matter of applying the built-in <code>.sort</code> method with a custom comparator function:</p><figure class="kg-card kg-image-card"><img src="/content/images/2023/11/carbon--4-.png" class="kg-image" alt loading="lazy" width="1360" height="328" srcset="/content/images/size/w600/2023/11/carbon--4-.png 600w, /content/images/size/w1000/2023/11/carbon--4-.png 1000w, /content/images/2023/11/carbon--4-.png 1360w" sizes="(min-width: 720px) 720px"></figure><h3 id="initial-solution">Initial solution</h3><figure class="kg-card kg-image-card"><img src="/content/images/2023/11/carbon--6-.png" class="kg-image" alt loading="lazy" width="1360" height="850" srcset="/content/images/size/w600/2023/11/carbon--6-.png 600w, /content/images/size/w1000/2023/11/carbon--6-.png 1000w, /content/images/2023/11/carbon--6-.png 1360w" sizes="(min-width: 720px) 720px"></figure><h3 id="optimizing-with-map">Optimizing with Map</h3><p>The initial solution, though correct, was slow due to the <code>.findIndex</code> method. I then realized that a <code>Map</code> would be more efficient, especially for both lookup and value modification operations:</p><figure class="kg-card kg-image-card"><img src="/content/images/2023/11/carbon--5-.png" class="kg-image" alt loading="lazy" width="1360" height="700" srcset="/content/images/size/w600/2023/11/carbon--5-.png 600w, /content/images/size/w1000/2023/11/carbon--5-.png 1000w, /content/images/2023/11/carbon--5-.png 1360w" sizes="(min-width: 720px) 720px"></figure><p>Utilizing <code>Map</code> made the process faster and more efficient. The <code>get</code> and <code>set</code> methods of <code>Map</code> provided an easy and quick way to manage our data.</p><h3 id="conclusion">Conclusion</h3><p>This LeetCode challenge was not just about solving a problem but also a lesson in optimizing solutions using JavaScript's array and map methods. It underscored the importance of considering efficient data structures and operations in coding. A perfect reminder that in coding, the journey towards optimization is as crucial as the solution itself!</p>
+            </div>
+          </div>
+        </div>
+        <section class="m-author">
+          <div class="m-author__content">
+            <div class="m-author__picture">
+              <a href="/author/ashley/" class="m-author-picture" aria-label="Ashley Buckingham">
+                  <div style="background-image: url(/content/images/2023/01/T016PALP94Y-U01DN9PGZ6W-e92dcddddf2a-512.jpeg);"></div>
+              </a>
+            </div>
+            <div class="m-author__info">
+              <h4 class="m-author__name">
+                <a href="/author/ashley/">Ashley Buckingham</a>
+              </h4>
+              <ul class="m-author-links">
+                  <li>
+                    <a href="https://uk.linkedin.com/in/ashleybuckingham" target="_blank" rel="noopener" aria-label="Website">
+                      <span class="icon-globe" aria-hidden="true"></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://twitter.com/@cur50r_" target="_blank" rel="noopener" aria-label="Twitter">
+                      <span class="icon-twitter" aria-hidden="true"></span>
+                    </a>
+                  </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+
+    </div>
+  </article>
+</main>
+
+
+
+    
+<div class="m-search js-search" role="dialog" aria-modal="true" aria-label="Search">
+  <button class="m-icon-button outlined as-close-search js-close-search" aria-label="Close search">
+    <span class="icon-close" aria-hidden="true"></span>
+  </button>
+  <div class="m-search__content">
+    <form class="m-search__form">
+      <div class="pos-relative">
+        <span class="icon-search m-search-icon" aria-hidden="true"></span>
+        <label for="search-input" class="sr-only">
+          Type to search
+        </label>
+        <input id="search-input" type="text" class="m-input in-search js-input-search" placeholder="Type to search">
+      </div>
+    </form>
+    <div class="js-search-results hide"></div>
+    <p class="m-not-found align-center hide js-no-results">
+      No results for your search, please try with something else.
+    </p>
+  </div>
+</div>
+
+    
+<footer class="m-footer">
+  <div class="m-footer__content">
+    <nav class="m-footer-social">
+      <a href="/rss" aria-label="RSS">
+        <span class="icon-rss" aria-hidden="true"></span>
+      </a>
+    </nav>
+    <p class="m-footer-copyright">
+      <span>Ashley Buckingham - Blog &copy; 2023</span>
+      <span>&nbsp; &bull; &nbsp;</span>
+      <span>Published with <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a></span>
+    </p>
+  </div>
+</footer>
+
+    <script defer src="/assets/js/manifest.js?v=cdb99f323f"></script>
+    <script defer src="/assets/js/vendor/content-api.min.js?v=cdb99f323f"></script>
+    <script defer src="/assets/js/vendor.js?v=cdb99f323f"></script>
+    <script defer src="/assets/js/app.js?v=cdb99f323f"></script>
+
+      <script defer src="/assets/js/post.js?v=cdb99f323f"></script>
+
+
+    
+  </body>
+</html>
